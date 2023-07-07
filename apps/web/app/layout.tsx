@@ -1,4 +1,4 @@
-import 'ui/styles/global.css'
+import "ui/styles/global.css";
 
 export default function RootLayout({
   children,
@@ -7,7 +7,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className="bg-neutral-50 flex flex-col min-h-screen">
+        {children}
+      </body>
     </html>
   );
 }
