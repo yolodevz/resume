@@ -1,0 +1,15 @@
+@font-face {
+    font-family: 'madeType-outerSans-black';
+    src: url("../public/fonts/madeType/outerSans/black.woff2") format('woff2'),
+    url('../public/fonts/madeType/outerSans/black.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'madeType-outerSans-black-outlined';
+    src: url("../public/fonts/madeType/outerSans/black-outlined.woff2") format('woff2'),
+    url('../public/fonts/madeType/outerSans/black-outlined.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
