@@ -1,10 +1,11 @@
-import { Button, Header } from "ui";
+import { Header, Punchline, Footer } from "ui";
 
 export default function Page() {
   return (
     <>
-      <Header text="Web" />
-      <Button />
+      <Header />
+      <Punchline />
+      <Footer />
     </>
   );
 }
