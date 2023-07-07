@@ -10,7 +10,7 @@ importers:
       prettier: ^2.5.1
       turbo: latest
     devDependencies:
-      '@turbo/gen': 1.9.7_qobivwqysb4oyvo7tfdjaajnaa
+      '@turbo/gen': 1.9.7_cin3sed6ohfsopbmt6orxeb4o4
       eslint: 7.32.0
       eslint-config-custom: link:packages/eslint-config-custom
       prettier: 2.8.8
@@ -139,6 +139,9 @@ importers:
 
   packages/ui:
     specifiers:
+      '@fortawesome/free-brands-svg-icons': ^6.4.0
+      '@fortawesome/free-solid-svg-icons': ^6.4.0
+      '@fortawesome/react-fontawesome': ^0.2.0
       '@types/react': ^18.2.0
       '@types/react-dom': ^18.2.0
       autoprefixer: ^10.4.14
@@ -146,12 +149,17 @@ importers:
       eslint: ^7.32.0
       eslint-config-custom: workspace:*
       postcss: ^8.4.24
-      react: ^17.0.2
+      react: ^18.2.0
+      react-fast-marquee: ^1.6.0
       tailwindcss: ^3.3.2
       tsconfig: workspace:*
       typescript: ^4.5.2
     dependencies:
+      '@fortawesome/free-brands-svg-icons': 6.4.0
+      '@fortawesome/free-solid-svg-icons': 6.4.0
+      '@fortawesome/react-fontawesome': 0.2.0_tumfstpptabomqiydababgzl3q
       class-variance-authority: 0.6.1
+      react-fast-marquee: 1.6.0_biqbaboplfbrettd7655fr4n2y
     devDependencies:
       '@types/react': 18.2.5
       '@types/react-dom': 18.2.3
@@ -159,7 +167,7 @@ importers:
       eslint: 7.32.0
       eslint-config-custom: link:../eslint-config-custom
       postcss: 8.4.24
-      react: 17.0.2
+      react: 18.2.0
       tailwindcss: 3.3.2
       tsconfig: link:../tsconfig
       typescript: 4.9.5
@@ -3464,6 +3472,47 @@ packages:
       react-dom: 18.2.0_react@18.2.0
     dev: false
 
+  /@fortawesome/fontawesome-common-types/6.4.0:
+    resolution: {integrity: sha512-HNii132xfomg5QVZw0HwXXpN22s7VBHQBv9CeOu9tfJnhsWQNd2lmTNi8CSrnw5B+5YOmzu1UoPAyxaXsJ6RgQ==}
+    engines: {node: '>=6'}
+    requiresBuild: true
+    dev: false
+
+  /@fortawesome/fontawesome-svg-core/6.4.0:
+    resolution: {integrity: sha512-Bertv8xOiVELz5raB2FlXDPKt+m94MQ3JgDfsVbrqNpLU9+UE2E18GKjLKw+d3XbeYPqg1pzyQKGsrzbw+pPaw==}
+    engines: {node: '>=6'}
+    requiresBuild: true
+    dependencies:
+      '@fortawesome/fontawesome-common-types': 6.4.0
+    dev: false
+
+  /@fortawesome/free-brands-svg-icons/6.4.0:
+    resolution: {integrity: sha512-qvxTCo0FQ5k2N+VCXb/PZQ+QMhqRVM4OORiO6MXdG6bKolIojGU/srQ1ptvKk0JTbRgaJOfL2qMqGvBEZG7Z6g==}
+    engines: {node: '>=6'}
+    requiresBuild: true
+    dependencies:
+      '@fortawesome/fontawesome-common-types': 6.4.0
+    dev: false
+
+  /@fortawesome/free-solid-svg-icons/6.4.0:
+    resolution: {integrity: sha512-kutPeRGWm8V5dltFP1zGjQOEAzaLZj4StdQhWVZnfGFCvAPVvHh8qk5bRrU4KXnRRRNni5tKQI9PBAdI6MP8nQ==}
+    engines: {node: '>=6'}
+    requiresBuild: true
+    dependencies:
+      '@fortawesome/fontawesome-common-types': 6.4.0
+    dev: false
+
+  /@fortawesome/react-fontawesome/0.2.0_tumfstpptabomqiydababgzl3q:
+    resolution: {integrity: sha512-uHg75Rb/XORTtVt7OS9WoK8uM276Ufi7gCzshVWkUJbHhh3svsUUeqXerrM96Wm7fRiDzfKRwSoahhMIkGAYHw==}
+    peerDependencies:
+      '@fortawesome/fontawesome-svg-core': ~1 || ~6
+      react: '>=16.3'
+    dependencies:
+      '@fortawesome/fontawesome-svg-core': 6.4.0
+      prop-types: 15.8.1
+      react: 18.2.0
+    dev: false
+
   /@humanwhocodes/config-array/0.11.10:
     resolution: {integrity: sha512-KVVjQmNUepDVGXNuoRRdmmEjruj0KfiGSbS8LVc12LMsWDQzRXJ0qdhN8L8uUigKpfEHRhlaQFY0ib1tnUbNeQ==}
     engines: {node: '>=10.10.0'}
@@ -5210,7 +5259,7 @@ packages:
     resolution: {integrity: sha512-vxhUy4J8lyeyinH7Azl1pdd43GJhZH/tP2weN8TntQblOY+A0XbT8DJk1/oCPuOOyg/Ja757rG0CgHcWC8OfMA==}
     dev: true
 
-  /@turbo/gen/1.9.7_qobivwqysb4oyvo7tfdjaajnaa:
+  /@turbo/gen/1.9.7_cin3sed6ohfsopbmt6orxeb4o4:
     resolution: {integrity: sha512-mjenROdRNvYxZixNfamJY/XxwKMT+01PuQby8+qdRUUa5ZLBPOv4rw11n+II1O8ZnpFpBJIGGFJcnRNY+lCddw==}
     dependencies:
       chalk: 2.4.2
@@ -5220,7 +5269,7 @@ packages:
       minimatch: 9.0.0
       node-plop: 0.26.3
       semver: 7.5.0
-      ts-node: 10.9.1_qobivwqysb4oyvo7tfdjaajnaa
+      ts-node: 10.9.1_cin3sed6ohfsopbmt6orxeb4o4
       update-check: 1.5.4
       validate-npm-package-name: 5.0.0
     transitivePeerDependencies:
@@ -11065,6 +11114,16 @@ packages:
     resolution: {integrity: sha512-nsO+KSNgo1SbJqJEYRE9ERzo7YtYbou/OqjSQKxV7jcKox7+usiUVZOAC+XnDOABXggQTno0Y1CpVnuWEc1boQ==}
     dev: false
 
+  /react-fast-marquee/1.6.0_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-jtuwT9SNjrqxnE7lGZ8mTL1I8Q4+9G4aBta2p+y2Pa3SjR17QROblwrLICyM8rbjQFHgHawTHcaH9HvoVO2NOA==}
+    peerDependencies:
+      react: '>= 16.8.0 || 18.0.0'
+      react-dom: '>= 16.8.0 || 18.0.0'
+    dependencies:
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+    dev: false
+
   /react-focus-lock/2.9.4_i73ekzlbntu7jol6ph2fvy4mga:
     resolution: {integrity: sha512-7pEdXyMseqm3kVjhdVH18sovparAzLg5h6WvIx7/Ck3ekjhrrDMEegHSa3swwC8wgfdd7DIdUVRGeiHT9/7Sgg==}
     peerDependencies:
@@ -11144,14 +11203,6 @@ packages:
     dependencies:
       prop-types: 15.8.1
     dev: false
-
-  /react/17.0.2:
-    resolution: {integrity: sha512-gnhPt75i/dq/z3/6q/0asP78D0u592D5L1pd7M8P+dck6Fu/jJeL6iVVK23fptSUZj8Vjf++7wXA8UNclGQcbA==}
-    engines: {node: '>=0.10.0'}
-    dependencies:
-      loose-envify: 1.4.0
-      object-assign: 4.1.1
-    dev: true
 
   /react/18.2.0:
     resolution: {integrity: sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==}
@@ -12338,7 +12389,7 @@ packages:
     resolution: {integrity: sha512-Y/arvbn+rrz3JCKl9C4kVNfTfSm2/mEp5FSz5EsZSANGPSlQrpRI5M4PKF+mJnE52jOO90PnPSc3Ur3bTQw0gA==}
     dev: true
 
-  /ts-node/10.9.1_qobivwqysb4oyvo7tfdjaajnaa:
+  /ts-node/10.9.1_cin3sed6ohfsopbmt6orxeb4o4:
     resolution: {integrity: sha512-NtVysVPkxxrwFGUUxGYhfux8k78pQB3JqYBXlLRZgdGUqTO5wU/UyHop5p70iEbGhB7q5KmiZiU0Y3KlJrScEw==}
     hasBin: true
     peerDependencies:
@@ -12364,7 +12415,7 @@ packages:
       create-require: 1.1.1
       diff: 4.0.2
       make-error: 1.3.6
-      typescript: 5.1.6
+      typescript: 4.9.5
       v8-compile-cache-lib: 3.0.1
       yn: 3.1.1
     dev: true
