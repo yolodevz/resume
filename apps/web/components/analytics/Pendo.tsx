@@ -13,9 +13,10 @@ declare global {
 export const Pendo = () => {
   useEffect(() => {
     if (window.pendo) window.pendo.identify({ visitor: {} });
-  }, [window.pendo]);
+  }, []);
 
   const API_KEY = process.env["NEXT_PUBLIC_PENDO_API_KEY"];
+  console.log("API_KEY", API_KEY);
   if (!API_KEY) return null;
 
   return (
