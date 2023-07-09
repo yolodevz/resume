@@ -48,7 +48,7 @@ const SocialLinks = ({
         <a
           key={link.name}
           href={link.url}
-          className="inline-flex items-center justify-center text-neutral-500 hover:text-pink-300"
+          className="inline-flex items-center justify-center text-rose-500 hover:text-white"
         >
           {link.icon}
         </a>
@@ -64,15 +64,16 @@ export const Footer = () => {
     <Container
       as="footer"
       size="lg"
-      outerClassName="w-full bg-black !p-4 mt-auto"
+      outerClassName="w-full bg-black !p-4 mt-auto sticky bottom-0"
       innerClassName="flex justify-between items-center"
     >
       <div className="group inline-flex gap-2 items-baseline">
         <Logo variant="long" />
         <Text
-          size="xs"
+          size="xxs"
           className={cx(
-            hovered ? "text-pink-300" : "text-neutral-500 select-none"
+            "text-white select-none",
+            hovered ? "opacity-100 font-bold" : "opacity-50"
           )}
         >
           Creative Frontend

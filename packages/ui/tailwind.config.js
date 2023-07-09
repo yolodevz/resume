@@ -11,10 +11,21 @@ module.exports = {
     extend: {
       fontFamily: {
         black: ["madeType-outerSans-black", "sans-serif"],
+        light: ["madeType-outerSans-light", "sans-serif"],
         "black-outlined": ["madeType-outerSans-black-outlined", "sans-serif"],
         special: ["Dorsa", "sans-serif"],
       },
+      animation: {
+        "fade-in": "fade-in .3s ease-in .2s 1 backwards",
+      },
+      keyframes: {
+        "fade-in": {
+          from: { opacity: 0 },
+          to: { opacity: 1 },
+        },
+      },
       fontSize: {
+        "fluid-xxs": createFluidFontSize(10, 11),
         "fluid-xs": createFluidFontSize(12, 14),
         "fluid-sm": createFluidFontSize(14, 16),
         "fluid-base": createFluidFontSize(16, 18),
@@ -25,4 +36,5 @@ module.exports = {
       },
     },
   },
+  plugins: [require("@tailwindcss/typography")],
 };
