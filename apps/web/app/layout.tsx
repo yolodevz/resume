@@ -7,9 +7,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="bg-neutral-50 flex flex-col min-h-screen">
-        {children}
-      </body>
+      <body className="bg-black flex flex-col min-h-screen">{children}</body>
     </html>
   );
 }

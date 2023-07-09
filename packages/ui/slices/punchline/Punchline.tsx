@@ -3,9 +3,9 @@ import { Text } from "../../components";
 import Marquee from "react-fast-marquee";
 
 export const Punchline = () => (
-  <div className="relative flex-auto flex justify-center align-center overflow-hidden">
-    <div className="-rotate-90 w-[100vh] flex">
-      <Marquee className="uppercase" speed={70}>
+  <div className="relative flex-auto flex justify-center align-center overflow-hidden text-white select-none h-screen">
+    <div className="-rotate-1 w-full flex">
+      <Marquee className="uppercase animate-fade-in" speed={200}>
         <Text as="span" intent="black-outlined" size="3xl" className="ml-8">
           Bake
         </Text>

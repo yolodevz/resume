@@ -64,7 +64,7 @@ export const Footer = () => {
     <Container
       as="footer"
       size="lg"
-      outerClassName="w-full bg-black !p-4 mt-auto"
+      outerClassName="w-full bg-black !p-4 mt-auto sticky bottom-0"
       innerClassName="flex justify-between items-center"
     >
       <div className="group inline-flex gap-2 items-baseline">

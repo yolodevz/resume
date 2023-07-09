@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "cd ../.. && vercel dev --listen 5005",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
