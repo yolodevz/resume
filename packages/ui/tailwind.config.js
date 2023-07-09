@@ -11,10 +11,12 @@ module.exports = {
     extend: {
       fontFamily: {
         black: ["madeType-outerSans-black", "sans-serif"],
+        light: ["madeType-outerSans-light", "sans-serif"],
         "black-outlined": ["madeType-outerSans-black-outlined", "sans-serif"],
         special: ["Dorsa", "sans-serif"],
       },
       fontSize: {
+        "fluid-xxs": createFluidFontSize(10, 11),
         "fluid-xs": createFluidFontSize(12, 14),
         "fluid-sm": createFluidFontSize(14, 16),
         "fluid-base": createFluidFontSize(16, 18),
