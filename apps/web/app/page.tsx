@@ -8,7 +8,8 @@ const isDevelopment = process.env["NODE_ENV"] === "development";
 export default function Page() {
   return (
     <>
-      <Head>{isDevelopment && <Pendo />}</Head>
+      <Pendo />
+      <Head>{!isDevelopment && <Pendo />}</Head>
       <Header />
       <Punchline />
       <Footer />
