@@ -12,7 +12,7 @@ interface ILogo {
   variant?: "short" | "long";
 }
 
-const styledLogo = cva("", {
+const styledLogo = cva("uppercase", {
   variants: {
     intent: {
       light: "text-white",
@@ -29,19 +29,31 @@ export const Logo = ({
   variant = "short",
   className,
 }: ILogo) => {
-  const text = variant === "short" ? "Yd" : "Yolodev";
+  const text =
+    variant === "short" ? (
+      <>
+        <Text as="span" intent="black" className="tracking-wider">
+          Y
+        </Text>
+        <Text as="span" intent="black" className="tracking-wider text-rose-500">
+          .
+        </Text>
+      </>
+    ) : (
+      <>
+        <Text as="span" intent="black" className="tracking-wider">
+          Yolo
+        </Text>
+        <Text
+          as="span"
+          size="xxs"
+          intent="black"
+          className="tracking-wider text-rose-500"
+        >
+          dev
+        </Text>
+      </>
+    );
 
-  return (
-    <Text
-      as="span"
-      intent="special"
-      className={cx(
-        "text-neutral-50 !text-5xl tracking-wider",
-        styledLogo({ intent }),
-        className
-      )}
-    >
-      {text}
-    </Text>
-  );
+  return <div className={cx(styledLogo({ intent }), className)}>{text}</div>;
 };

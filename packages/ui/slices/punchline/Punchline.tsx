@@ -13,13 +13,22 @@ export const Punchline = () => (
           Good
         </Text>
         <Text as="span" intent="black" size="3xl" className="ml-8">
-          St*ff
+          St
+        </Text>
+        <Text as="span" intent="black" size="3xl" className="text-rose-500">
+          *
+        </Text>
+        <Text as="span" intent="black" size="3xl" className="">
+          ff
         </Text>
         <Text as="span" intent="black-outlined" size="3xl" className="ml-8">
           Or
         </Text>
         <Text as="span" intent="black" size="3xl" className="ml-8">
-          skedaddle.
+          skedaddle
+        </Text>
+        <Text as="span" intent="black" size="3xl" className="text-rose-500">
+          .
         </Text>
       </Marquee>
     </div>
