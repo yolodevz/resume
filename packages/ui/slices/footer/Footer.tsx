@@ -64,10 +64,10 @@ export const Footer = () => {
     <Container
       as="footer"
       size="lg"
-      outerClassName="w-full bg-black !p-4 mt-auto sticky bottom-0"
+      outerClassName="w-full !p-4 mt-auto sticky bottom-0 after:absolute after:inset-0 after:-z-[1] after:bg-gradient-to-t after:from-black"
       innerClassName="flex justify-between items-center"
     >
-      <div className="group inline-flex gap-2 items-baseline">
+      <div className="group inline-flex gap-2 items-baseline -rotate-2">
         <Logo variant="long" />
         <Text
           size="xxs"
