@@ -69,47 +69,55 @@ interface IListWithComments {
 
 export const ListWithComments = ({ className }: IListWithComments) => {
   return (
-    <Container outerClassName={className} innerClassName="max-w-max">
-      <div className="prose prose-slate mb-8">
-        <pre className="!bg-zinc-950">
-          <code className="text-gray-500">
-            <p className="m-0">{`/**`}</p>
-            <p className="m-0">
-              *
-              <span className="text-amber-200 ml-2">{`@TODO - find time to bake a good portfolio page`}</span>
-            </p>
-            <p className="m-0">{`/*`}</p>
-          </code>
-        </pre>
-      </div>
-      <ul role="list" className="space-y-6 max-w-max">
-        {activity.map((activityItem, activityItemIdx) => (
-          <li key={activityItem.id} className="relative flex gap-x-4">
-            <div
-              className={cx(
-                activityItemIdx === activity.length - 1 ? "h-6" : "-bottom-6",
-                "absolute left-0 top-0 flex w-6 justify-center"
-              )}
-            >
-              <div className="w-px bg-gray-200 opacity-30" />
-            </div>
-
-            <>
-              <div className="relative flex h-6 w-6 flex-none items-center justify-center">
-                <div className={cx(styledDot({ intent: activityItem.type }))} />
-              </div>
-              <p className="flex-auto py-0.5 text-xs leading-5 text-gray-400">
-                <span
-                  className={cx(styledStatus({ intent: activityItem.type }))}
-                >
-                  {activityItem.type}
-                </span>{" "}
-                {activityItem.description}
+    <Container
+      size="lg"
+      outerClassName={className}
+      innerClassName="flex justify-end"
+    >
+      <div>
+        <div className="prose prose-slate mb-8 w-max">
+          <pre className="!bg-zinc-950">
+            <code className="text-gray-500">
+              <p className="m-0">{`/**`}</p>
+              <p className="m-0">
+                *
+                <span className="text-amber-200 ml-2">{`@TODO - find time to bake a good portfolio page`}</span>
               </p>
-            </>
-          </li>
-        ))}
-      </ul>
+              <p className="m-0">{`/*`}</p>
+            </code>
+          </pre>
+        </div>
+        <ul role="list" className="space-y-6 max-w-max">
+          {activity.map((activityItem, activityItemIdx) => (
+            <li key={activityItem.id} className="relative flex gap-x-4">
+              <div
+                className={cx(
+                  activityItemIdx === activity.length - 1 ? "h-6" : "-bottom-6",
+                  "absolute left-0 top-0 flex w-6 justify-center"
+                )}
+              >
+                <div className="w-px bg-gray-200 opacity-30" />
+              </div>
+
+              <>
+                <div className="relative flex h-6 w-6 flex-none items-center justify-center">
+                  <div
+                    className={cx(styledDot({ intent: activityItem.type }))}
+                  />
+                </div>
+                <p className="flex-auto py-0.5 text-xs leading-5 text-gray-400">
+                  <span
+                    className={cx(styledStatus({ intent: activityItem.type }))}
+                  >
+                    {activityItem.type}
+                  </span>{" "}
+                  {activityItem.description}
+                </p>
+              </>
+            </li>
+          ))}
+        </ul>
+      </div>
     </Container>
   );
 };
