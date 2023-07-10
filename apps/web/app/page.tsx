@@ -1,4 +1,4 @@
-import { Header, Punchline, Footer, Container } from "ui";
+import { Header, Punchline, PunchlineV2, Footer, Container } from "ui";
 import Head from "next/head";
 
 import { Pendo } from "../components/analytics";
@@ -12,8 +12,8 @@ export default function Page() {
       <Pendo />
       <Head>{!isDevelopment && <Pendo />}</Head>
       <Header />
-      <Punchline />
-      <ListWithComments className="mb-16 rotate-1" />
+      <PunchlineV2 />
+      <ListWithComments className="mb-16 rotate-1 ml-auto mr-0" />
       <Footer />
     </>
   );

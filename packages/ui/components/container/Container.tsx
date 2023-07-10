@@ -54,14 +54,17 @@ export const Container = ({
     <Component
       id={id}
       className={cx(
-        "scroll-m-[50vh] overflow-x-clip px-12 md:px-0 mx-auto grid grid-cols-12 max-w-screen-xl w-full",
+        "scroll-m-[50vh] overflow-x-clip px-12 md:px-0 mx-auto grid grid-cols-12",
         outerClassName
       )}
       style={style}
       {...props}
     >
       <Component
-        className={cx(`col-span-full ${sizeClasses[size]}`, innerClassName)}
+        className={cx(
+          `col-span-full max-w-screen-xl w-full mx-auto ${sizeClasses[size]}`,
+          innerClassName
+        )}
       >
         {children}
       </Component>
