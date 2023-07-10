@@ -27,6 +27,7 @@
     "@headlessui/react": "^1.7.15",
     "@heroicons/react": "^2.0.18",
     "class-variance-authority": "^0.6.1",
+    "gsap": "^3.12.2",
     "react-fast-marquee": "^1.6.0"
   }
 }

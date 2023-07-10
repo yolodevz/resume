@@ -151,6 +151,7 @@ importers:
       class-variance-authority: ^0.6.1
       eslint: ^7.32.0
       eslint-config-custom: workspace:*
+      gsap: ^3.12.2
       postcss: ^8.4.24
       react: ^18.2.0
       react-fast-marquee: ^1.6.0
@@ -164,6 +165,7 @@ importers:
       '@headlessui/react': 1.7.15_biqbaboplfbrettd7655fr4n2y
       '@heroicons/react': 2.0.18_react@18.2.0
       class-variance-authority: 0.6.1
+      gsap: 3.12.2
       react-fast-marquee: 1.6.0_biqbaboplfbrettd7655fr4n2y
     devDependencies:
       '@tailwindcss/typography': 0.5.9_tailwindcss@3.3.2
@@ -8875,6 +8877,10 @@ packages:
   /groq-js/1.1.9:
     resolution: {integrity: sha512-Kml1SgKotOOEmm1rK1w/K4UprIWJ/UU0SzeO2dPy8ab2wcAGfE82X5CTdaD1AMaP+40Ug1gAsVgPF5S2H/fcPw==}
     engines: {node: '>= 14'}
+    dev: false
+
+  /gsap/3.12.2:
+    resolution: {integrity: sha512-EkYnpG8qHgYBFAwsgsGEqvT1WUidX0tt/ijepx7z8EUJHElykg91RvW1XbkT59T0gZzzszOpjQv7SE41XuIXyQ==}
     dev: false
 
   /gunzip-maybe/1.4.2:
