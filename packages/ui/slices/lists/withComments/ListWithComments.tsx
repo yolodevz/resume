@@ -72,16 +72,16 @@ export const ListWithComments = ({ className }: IListWithComments) => {
     <Container
       size="lg"
       outerClassName={className}
-      innerClassName="flex justify-end"
+      innerClassName="flex mt-[30vh] items-center justify-center"
     >
-      <div>
-        <div className="prose prose-slate mb-8 w-max">
-          <pre className="!bg-zinc-950">
+      <div className="w-full lg:w-auto">
+        <div className="prose prose-slate mb-8 w-full max-w-max">
+          <pre className="!bg-zinc-900">
             <code className="text-gray-500">
               <p className="m-0">{`/**`}</p>
               <p className="m-0">
                 *
-                <span className="text-amber-200 ml-2">{`@TODO - find time to bake a good portfolio page`}</span>
+                <span className="text-amber-200 ml-2 pr-4">{`@TODO - find time to bake a good portfolio page`}</span>
               </p>
               <p className="m-0">{`/*`}</p>
             </code>
