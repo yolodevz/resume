@@ -4,8 +4,8 @@ module.exports = {
         './index.html',
         './.storybook/preview.ts',
         './src/**/*.{js,ts,jsx,tsx}',
-        '../../packages/ui/components/**/*.{js,ts,jsx,tsx}',
-        '../../packages/ui/slices/**/*.{js,ts,jsx,tsx}',
+        '../../packages/@yolo/ui/src/**/*.{js,ts,jsx,tsx}',
+        '../../packages/@monogram/ui/src/**/*.{js,ts,jsx,tsx}',
     ],
-    presets: [require('ui/tailwind.config')]
+    presets: [require('@yolo/ui/tailwind.config'), require('@monogram/ui/tailwind.config')]
 }

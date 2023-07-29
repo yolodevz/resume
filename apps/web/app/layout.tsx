@@ -1,4 +1,4 @@
-import "ui/styles/global.css";
+import "@yolo/ui/styles/global.css";
 
 export default function RootLayout({
   children,

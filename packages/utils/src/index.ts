@@ -1,0 +1,1 @@
+export { createFluidFontSize } from "./createFluidFontSize";

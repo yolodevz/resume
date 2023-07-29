@@ -1,8 +1,8 @@
-import { Header, Punchline, PunchlineV2, Footer, Container } from "ui";
 import Head from "next/head";
 
+import { Header, PunchlineV2, Footer, ListWithComments } from "@yolo/ui";
+
 import { Pendo } from "../components/analytics";
-import { ListWithComments } from "ui/slices/lists";
 
 const isDevelopment = process.env["NODE_ENV"] === "development";
 
