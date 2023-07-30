@@ -9,7 +9,7 @@
     "lint": "eslint \"**/*.ts*\"",
     "storybook": "storybook dev -p 6007",
     "build-storybook": "storybook build --quiet",
-    "move-storybook": "mkdir -p ../../storybook-static/yolo-ui && mv storybook-static ../../storybook-static/yolo-ui"
+    "move-storybook": "mv storybook-static ../../apps/workshop/storybook-static/yolo-ui"
   },
   "devDependencies": {
     "@storybook/addon-essentials": "^7.1.1",
