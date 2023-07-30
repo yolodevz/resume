@@ -9,7 +9,7 @@
     "lint": "eslint \"**/*.ts*\"",
     "storybook": "storybook dev -p 6008",
     "build-storybook": "storybook build --quiet",
-    "move-storybook": "mv storybook-static ../../storybook-static/monogram-ui"
+    "move-storybook": "mkdir -p ../../storybook-static/monogram-ui && mv storybook-static ../../storybook-static/monogram-ui"
   },
   "devDependencies": {
     "@storybook/addon-essentials": "^7.1.1",
