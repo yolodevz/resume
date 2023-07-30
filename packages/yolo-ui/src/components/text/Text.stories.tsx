@@ -1,10 +1,9 @@
 import type { Meta, StoryObj } from "@storybook/react";
-// import "../../../../styles/styles.monogram.css";
 
-import { Text } from "../../components";
+import { Text } from "./Text";
 
 const meta = {
-  title: "monogram/components/Text",
+  title: "components/Text",
   component: Text,
   parameters: {
     layout: "centered",

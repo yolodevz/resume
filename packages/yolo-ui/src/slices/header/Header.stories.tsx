@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { Header } from "../../slices";
+import { Header } from "./Header";
 
 const meta = {
-  title: "yolo/slices/Header",
+  title: "slices/Header",
   component: Header,
   parameters: {
     layout: "fullscreen",

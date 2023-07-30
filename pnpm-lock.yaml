@@ -10,7 +10,7 @@ importers:
       prettier: ^2.5.1
       turbo: latest
     devDependencies:
-      '@turbo/gen': 1.9.7_cin3sed6ohfsopbmt6orxeb4o4
+      '@turbo/gen': 1.9.7_qobivwqysb4oyvo7tfdjaajnaa
       eslint: 7.32.0
       eslint-config-custom: link:packages/eslint-config-custom
       prettier: 2.8.8
@@ -148,9 +148,11 @@ importers:
       '@storybook/addon-interactions': ^7.1.1
       '@storybook/addon-links': ^7.1.1
       '@storybook/blocks': ^7.1.1
+      '@storybook/manager-api': ^7.1.1
       '@storybook/react': ^7.1.1
       '@storybook/react-vite': ^7.1.1
       '@storybook/testing-library': ^0.0.14-next.2
+      '@storybook/theming': ^7.1.1
       '@tailwindcss/typography': ^0.5.9
       '@types/react': ^18.2.14
       autoprefixer: ^10.4.14
@@ -175,9 +177,11 @@ importers:
       '@storybook/addon-interactions': 7.1.1_biqbaboplfbrettd7655fr4n2y
       '@storybook/addon-links': 7.1.1_biqbaboplfbrettd7655fr4n2y
       '@storybook/blocks': 7.1.1_biqbaboplfbrettd7655fr4n2y
+      '@storybook/manager-api': 7.1.1_biqbaboplfbrettd7655fr4n2y
       '@storybook/react': 7.1.1_i4rjfizg7pnsmg7p6yi76gfzdq
       '@storybook/react-vite': 7.1.1_kamazo3lbrmxdnwqbxcxyftzqm
       '@storybook/testing-library': 0.0.14-next.2
+      '@storybook/theming': 7.1.1_biqbaboplfbrettd7655fr4n2y
       '@tailwindcss/typography': 0.5.9_tailwindcss@3.3.2
       '@types/react': 18.2.14
       autoprefixer: 10.4.14_postcss@8.4.24
@@ -223,9 +227,11 @@ importers:
       '@storybook/addon-links': ^7.1.1
       '@storybook/addon-onboarding': ^1.0.8
       '@storybook/blocks': ^7.1.1
+      '@storybook/manager-api': ^7.1.1
       '@storybook/react': ^7.1.1
       '@storybook/react-vite': ^7.1.1
       '@storybook/testing-library': ^0.2.0
+      '@storybook/theming': ^7.1.1
       '@tailwindcss/typography': ^0.5.9
       '@types/react': ^18.2.14
       autoprefixer: ^10.4.14
@@ -254,9 +260,11 @@ importers:
       '@storybook/addon-links': 7.1.1_biqbaboplfbrettd7655fr4n2y
       '@storybook/addon-onboarding': 1.0.8_biqbaboplfbrettd7655fr4n2y
       '@storybook/blocks': 7.1.1_biqbaboplfbrettd7655fr4n2y
+      '@storybook/manager-api': 7.1.1_biqbaboplfbrettd7655fr4n2y
       '@storybook/react': 7.1.1_i4rjfizg7pnsmg7p6yi76gfzdq
       '@storybook/react-vite': 7.1.1_kamazo3lbrmxdnwqbxcxyftzqm
       '@storybook/testing-library': 0.2.0
+      '@storybook/theming': 7.1.1_biqbaboplfbrettd7655fr4n2y
       '@tailwindcss/typography': 0.5.9_tailwindcss@3.3.2
       '@types/react': 18.2.14
       autoprefixer: 10.4.14_postcss@8.4.24
@@ -5268,7 +5276,7 @@ packages:
     resolution: {integrity: sha512-vxhUy4J8lyeyinH7Azl1pdd43GJhZH/tP2weN8TntQblOY+A0XbT8DJk1/oCPuOOyg/Ja757rG0CgHcWC8OfMA==}
     dev: true
 
-  /@turbo/gen/1.9.7_cin3sed6ohfsopbmt6orxeb4o4:
+  /@turbo/gen/1.9.7_qobivwqysb4oyvo7tfdjaajnaa:
     resolution: {integrity: sha512-mjenROdRNvYxZixNfamJY/XxwKMT+01PuQby8+qdRUUa5ZLBPOv4rw11n+II1O8ZnpFpBJIGGFJcnRNY+lCddw==}
     dependencies:
       chalk: 2.4.2
@@ -5278,7 +5286,7 @@ packages:
       minimatch: 9.0.0
       node-plop: 0.26.3
       semver: 7.5.0
-      ts-node: 10.9.1_cin3sed6ohfsopbmt6orxeb4o4
+      ts-node: 10.9.1_qobivwqysb4oyvo7tfdjaajnaa
       update-check: 1.5.4
       validate-npm-package-name: 5.0.0
     transitivePeerDependencies:
@@ -12404,7 +12412,7 @@ packages:
     resolution: {integrity: sha512-Y/arvbn+rrz3JCKl9C4kVNfTfSm2/mEp5FSz5EsZSANGPSlQrpRI5M4PKF+mJnE52jOO90PnPSc3Ur3bTQw0gA==}
     dev: true
 
-  /ts-node/10.9.1_cin3sed6ohfsopbmt6orxeb4o4:
+  /ts-node/10.9.1_qobivwqysb4oyvo7tfdjaajnaa:
     resolution: {integrity: sha512-NtVysVPkxxrwFGUUxGYhfux8k78pQB3JqYBXlLRZgdGUqTO5wU/UyHop5p70iEbGhB7q5KmiZiU0Y3KlJrScEw==}
     hasBin: true
     peerDependencies:
@@ -12430,7 +12438,7 @@ packages:
       create-require: 1.1.1
       diff: 4.0.2
       make-error: 1.3.6
-      typescript: 4.9.5
+      typescript: 5.1.6
       v8-compile-cache-lib: 3.0.1
       yn: 3.1.1
     dev: true

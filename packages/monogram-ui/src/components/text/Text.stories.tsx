@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { Text } from "../../components";
+import { Text } from "./Text";
 
 const meta = {
-  title: "yolo/components/Text",
+  title: "components/Text",
   component: Text,
   parameters: {
     layout: "centered",
