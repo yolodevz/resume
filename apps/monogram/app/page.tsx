@@ -1,4 +1,4 @@
-import { Text } from "@monogram/ui/src/components/Text";
+import { Text } from "@monogram/ui";
 
 export default function Home() {
   return (
