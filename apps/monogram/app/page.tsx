@@ -31,7 +31,7 @@ export default function Home() {
             className="-ml-12 text-current"
           />
         </div>
-        <div className="col-span-2 absolute right-0 -lg:right-6 top-0">
+        <div className="col-span-2 absolute right-0 lg:right-5 top-0">
           <ImageStack />
         </div>
       </header>
