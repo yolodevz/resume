@@ -30,7 +30,7 @@ export interface ContainerProps {
 const styledText = cva("", {
   variants: {
     size: {
-      base: "text-fluid-base leading-loose",
+      base: "text-fluid-base lg:leading-loose",
       md: "text-fluid-md leading-relaxed",
       lg: "text-fluid-lg leading-relaxed",
       xl: "text-fluid-xl leading-relaxed",

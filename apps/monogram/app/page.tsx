@@ -10,20 +10,20 @@ export default function Home() {
           as="h1"
           size="2xl"
           intent="black"
-          className="z-10 w-full col-span-3 whitespace-nowrap"
+          className="z-10 w-full col-span-full sm:col-span-3 whitespace-nowrap"
         >
           jamstack 101
         </Text>
         <Text
           as="p"
           intent="light"
-          className="z-10 mt-4 ml-8 md:ml-14 md:mt-10 col-span-4 lg:col-span-3 xl:col-span-2 text-stone-600/80 mb-16"
+          className="z-10 mt-4 lg:ml-14 md:mt-10 col-span-full md:col-span-2 text-stone-600/80 mb-16"
         >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu augue
           massa, tincidunt proin nunc viverra tristique tempor, ipsum. At lectus
           vel pretium tempor ut dui vivamus sit.
         </Text>
-        <div className="col-span-2 col-start-1 flex justify-center">
+        <div className="col-span-full sm:col-span-2 !col-start-1 flex justify-center z-10">
           <Image
             priority
             src={mouseIcon}
@@ -31,7 +31,7 @@ export default function Home() {
             className="-ml-12 text-current"
           />
         </div>
-        <div className="col-span-2 absolute right-0 lg:right-5 top-0">
+        <div className="hidden sm:block col-span-full lg:col-span-2 absolute right-0 lg:right-5 top-0 h-full">
           <ImageStack />
         </div>
       </header>
