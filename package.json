@@ -7,9 +7,8 @@
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "clean": "turbo run clean && rm -rf node_modules",
     "storybook": "turbo run storybook",
-    "build-workshop": "turbo run build-storybook --parallel && turbo run build --filter=workshop",
     "build-storybook": "turbo run build-storybook --parallel",
-    "move-storybook": "turbo run move-storybook"
+    "move-storybook": "turbo run move-storybook --filter @yolo/ui --filter @monogram/ui"
   },
   "devDependencies": {
     "@turbo/gen": "^1.9.7",
