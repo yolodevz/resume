@@ -19,7 +19,7 @@ build
 *.pem
 
 # storybook
-"storybook-static/**"
+storybook-static/**
 
 # debug
 npm-debug.log*
