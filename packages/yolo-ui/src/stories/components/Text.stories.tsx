@@ -1,22 +1,21 @@
 import type { Meta, StoryObj } from "@storybook/react";
-// import "../../../../styles/styles.yolo.css";
 
-import { Header } from "@yolo/ui";
+import { Text } from "../../components";
 
 const meta = {
-  title: "yolo/slices/Header",
-  component: Header,
+  title: "yolo/components/Text",
+  component: Text,
   parameters: {
-    layout: "fullscreen",
+    layout: "centered",
   },
   tags: ["autodocs"],
-} satisfies Meta<typeof Header>;
+} satisfies Meta<typeof Text>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
-    text: "Button",
+    children: "change me",
   },
 };

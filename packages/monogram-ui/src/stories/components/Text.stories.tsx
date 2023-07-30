@@ -1,9 +1,10 @@
 import type { Meta, StoryObj } from "@storybook/react";
+// import "../../../../styles/styles.monogram.css";
 
-import { Text } from "@yolo/ui";
+import { Text } from "../../components";
 
 const meta = {
-  title: "yolo/components/Text",
+  title: "monogram/components/Text",
   component: Text,
   parameters: {
     layout: "centered",

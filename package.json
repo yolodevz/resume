@@ -5,7 +5,11 @@
     "dev": "turbo run dev --filter",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "clean": "turbo run clean && rm -rf node_modules"
+    "clean": "turbo run clean && rm -rf node_modules",
+    "storybook": "turbo run storybook",
+    "workshop": "turbo run dev --filter=workshop",
+    "build-storybook": "turbo run build-storybook --parallel",
+    "move-storybook": "turbo run move-storybook --filter=workshop && turbo run move-storybook --filter=!workshop"
   },
   "devDependencies": {
     "@turbo/gen": "^1.9.7",
