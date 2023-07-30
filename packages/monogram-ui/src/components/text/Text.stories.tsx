@@ -18,6 +18,6 @@ export const Default: Story = {
   args: {
     children: "jamstack",
     size: "3xl",
-    className: "font-black",
+    intent: "black",
   },
 };
