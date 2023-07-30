@@ -7,7 +7,7 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      "@monogram/ui": path.resolve(__dirname, "../../packages/monogram-ui"),
+      "@monogram/ui": path.resolve(__dirname, "../../packages/monograms-ui"),
     },
   },
 });

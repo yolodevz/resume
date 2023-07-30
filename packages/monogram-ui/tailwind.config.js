@@ -12,7 +12,7 @@ module.exports = {
         "fluid-lg": createFluidFontSize(18, 20),
         "fluid-xl": createFluidFontSize(20, 24),
         "fluid-2xl": createFluidFontSize(32, 68),
-        "fluid-3xl": createFluidFontSize(42, 100),
+        "fluid-3xl": createFluidFontSize(42, 130),
       },
     },
   },
