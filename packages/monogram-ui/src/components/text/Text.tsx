@@ -4,14 +4,11 @@ import React from "react";
 import { cx, cva } from "class-variance-authority";
 
 const sizes = {
-  xxs: "xxs",
-  xs: "xs",
-  sm: "sm",
-  base: "sm",
+  base: "base",
+  md: "md",
   lg: "lg",
   xl: "xl",
   "2xl": "2xl",
-  "3xl": "3xl",
 } as const;
 
 export interface ContainerProps {
@@ -33,14 +30,11 @@ export interface ContainerProps {
 const styledText = cva("", {
   variants: {
     size: {
-      xxs: "text-fluid-xxs",
-      xs: "text-fluid-xs",
-      sm: "text-fluid-sm",
       base: "text-fluid-base",
+      md: "text-fluid-md",
       lg: "text-fluid-lg",
       xl: "text-fluid-xl",
       "2xl": "text-fluid-2xl",
-      "3xl": "text-fluid-3xl",
     },
     intent: {
       black: "font-black",
