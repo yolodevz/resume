@@ -18,9 +18,8 @@ export const ImageStack = () => {
         <div className="flex flex-col justify-center">
           <Image
             src="https://cdn.raster.app/v327tq6nmjmw2o/monogram/O15fTcZblSh?ixlib=js-3.8.0&s=b3e079d6bb0764077b173e165cb24522"
-            width={278}
-            className="aspect-[4.5/10]"
-            height={670}
+            width={280}
+            height={629}
             quality={100}
             alt="a multicolored pattern of lines on a white background"
             priority
@@ -29,7 +28,6 @@ export const ImageStack = () => {
         <div>
           <Image
             src="https://cdn.raster.app/v327tq6nmjmw2o/monogram/LcQwOp6mG2o?ixlib=js-3.8.0&s=378d5cb9f54756905d0e965a3de379b4"
-            className="aspect-[4.5/10]"
             width={278}
             height={670}
             quality={100}
