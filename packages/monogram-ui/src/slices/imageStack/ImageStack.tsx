@@ -22,6 +22,7 @@ export const ImageStack = () => {
           height={670}
           quality={100}
           alt="a multicolored pattern of lines on a white background"
+          priority
         />
         <Image
           src="https://cdn.raster.app/v327tq6nmjmw2o/monogram/LcQwOp6mG2o?ixlib=js-3.8.0&s=378d5cb9f54756905d0e965a3de379b4"
@@ -30,6 +31,7 @@ export const ImageStack = () => {
           height={670}
           quality={100}
           alt="a multicolored pattern of lines on a white background"
+          priority
         />
       </div>
       {/*<div className="flex items-end gap-x-10 absolute bottom-0 -right-[20%] h-full w-full">*/}
