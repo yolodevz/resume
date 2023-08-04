@@ -139,7 +139,7 @@ export const LogosGrid: React.FC = () => {
     <div
       className={cx(
         "opacity-0 relative flex flex-wrap justify-center place-items-center lg:grid",
-        "w-full max-w-7xl mx-auto mt-16 mb-24 md:mb-60 lg:min-h-screen ",
+        "w-full max-w-7xl mx-auto mt-16 mb-24 md:mb-60 lg:min-h-[100svh] ",
         "grid-cols-2 sm:grid-cols-3 md:grid-cols-4",
         "gap-x-8 md:gap-x-10 lg:gap-x-24",
         "gap-y-8 md:gap-y-10 lg:gap-y-[5vw]"

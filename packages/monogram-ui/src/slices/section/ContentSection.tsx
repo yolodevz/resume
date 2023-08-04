@@ -100,7 +100,7 @@ export const ContentSection = ({
 }: ContentSectionProps) => (
   <section
     className={cx(
-      "min-h-screen padded flex flex-col justify-center",
+      "min-h-[100svh] padded flex flex-col justify-center",
       className
     )}
   >
