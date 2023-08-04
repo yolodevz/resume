@@ -3,7 +3,6 @@
 import React, { useEffect, useRef } from "react";
 
 import Image from "next/image";
-import Script from "next/script";
 
 import { isMobile } from "react-device-detect"; // it's not ideal to use this, but it's a quick solution. Doesn't seem to have nice support for NextJs 13 yet though.
 
@@ -11,12 +10,10 @@ import { cx } from "class-variance-authority";
 
 // @todo handle public path better
 import NextLogo from "../../../../public/next-logo.svg";
+
 import ReactLogo from "../../../../public/react-logo.svg";
 import SvelteLogo from "../../../../public/svelte-logo.svg";
 import VueLogo from "../../../../public/vue-logo.svg";
-
-const SCROLL_TIMELINE_POLYFILL =
-  "https://flackr.github.io/scroll-timeline/dist/scroll-timeline.js";
 
 // @todo support getting images from CMS instead of defining them here
 const MAPPED_LOGOS = {
@@ -131,11 +128,11 @@ export const LogosGrid: React.FC = () => {
       )}
       ref={columnsRef}
     >
-      {/*This script isn't added globally, because it's only used by this component so far*/}
-      <Script src={SCROLL_TIMELINE_POLYFILL} />
       {LOGOS_KEYS.map((key, index) => (
         <Logo key={index} imageUrl={MAPPED_LOGOS[key].src} />
       ))}
     </div>
   );
 };
+
+export default LogosGrid;

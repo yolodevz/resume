@@ -1,12 +1,11 @@
 import dynamic from "next/dynamic";
 
 import {
-  // LogosGrid,
   ContentSection,
   ComputerSection,
   BlocksSection,
   SquigglyDivider,
-  // Heading,
+  Heading,
   // Footer,
   // Sphere,
 } from "@monogram/ui";
@@ -20,6 +19,10 @@ import {
   FOOTER_PROPS,
 } from "@/fixtures";
 
+const DynamicScoreGrid = dynamic(
+  () => import("@monogram/ui/src/components/animated/logos/LogosGrid")
+);
+
 const DynamicFooter = dynamic(() =>
   import("@monogram/ui/src/slices/footer/Footer").then((mod) => mod.Footer)
 );
@@ -32,15 +35,15 @@ const DynamicFooter = dynamic(() =>
 //   );
 // }
 
-// function LogosSection() {
-//   return (
-//     <section className="bg-[#151515] relative padded">
-//       <div className="container">
-//         <LogosGrid />
-//       </div>
-//     </section>
-//   );
-// }
+function LogosSection() {
+  return (
+    <section className="bg-[#151515] relative padded">
+      <div className="container">
+        <DynamicScoreGrid />
+      </div>
+    </section>
+  );
+}
 
 // function PresentationSection() {
 //   return (
@@ -61,7 +64,7 @@ function MainContent() {
   return (
     <>
       <ComputerSection {...COMPUTER_SECTION} />
-      {/*<LogosSection />*/}
+      <LogosSection />
       {/*<PresentationSection />*/}
       <SquigglyDivider />
     </>
