@@ -3,7 +3,7 @@ import {
   ContentSection,
   // ComputerSection,
   BlocksSection,
-  // SquigglyDivider,
+  SquigglyDivider,
   // Heading,
   // Footer,
   // Sphere,
@@ -51,16 +51,16 @@ function HeaderSection() {
   return <ContentSection {...TOP_CONTENT_SECTION} className="md:mt-40" />;
 }
 
-// function MainContent() {
-//   return (
-//     <>
-//       <ComputerSection {...COMPUTER_SECTION} />
-//       <LogosSection />
-//       <PresentationSection />
-//       <SquigglyDivider />
-//     </>
-//   );
-// }
+function MainContent() {
+  return (
+    <>
+      {/*<ComputerSection {...COMPUTER_SECTION} />*/}
+      {/*<LogosSection />*/}
+      {/*<PresentationSection />*/}
+      <SquigglyDivider />
+    </>
+  );
+}
 
 function BottomSection() {
   return (
@@ -75,7 +75,7 @@ export default function Home() {
   return (
     <main className="flex flex-col overflow-hidden min-h-[100svh]">
       <HeaderSection />
-      {/*<MainContent />*/}
+      <MainContent />
       <BottomSection />
       <BlocksSection />
       {/*<Footer {...FOOTER_PROPS} />*/}
