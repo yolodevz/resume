@@ -1,1 +1,2 @@
-export * from "./imageStack";
+export * from "./section";
+export * from "./footer";

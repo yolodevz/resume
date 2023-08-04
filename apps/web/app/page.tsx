@@ -12,7 +12,7 @@ export default function Page() {
       <Pendo />
       <Head>{!isDevelopment && <Pendo />}</Head>
       <Header />
-      <ListWithComments className="rotate-1 w-full" />
+      <ListWithComments className="w-full rotate-1" />
       <PunchlineV2 />
       <Footer />
     </>

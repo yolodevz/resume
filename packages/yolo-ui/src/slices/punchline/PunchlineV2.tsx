@@ -46,15 +46,15 @@ export const PunchlineV2: React.FC = () => {
   }, []);
 
   return (
-    <div className="overflow-x-hidden py-16 min-h-screen flex flex-col justify-center gap-8 text-white">
+    <div className="flex min-h-screen flex-col justify-center gap-8 overflow-x-hidden py-16 text-white">
       {Array.from({ length: sectionsCount }, (_, index) => (
         <section key={index}>
           <div
             ref={wrapperRefs.current[index]}
             className="opacity-0 transition-opacity"
           >
-            <div className="-rotate-1 w-full flex">
-              <div className="uppercase animate-fade-in h-max">
+            <div className="flex w-full -rotate-1">
+              <div className="h-max uppercase animate-fade-in">
                 <Text
                   as="span"
                   intent="black"

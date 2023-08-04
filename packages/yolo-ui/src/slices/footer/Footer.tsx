@@ -20,12 +20,12 @@ const socialLinks = [
   {
     name: "LinkedIn",
     url: "https://www.linkedin.com/in/yolodev/",
-    icon: <FontAwesomeIcon icon={faLinkedin} className="w-8 h-8" />,
+    icon: <FontAwesomeIcon icon={faLinkedin} className="h-8 w-8" />,
   },
   {
     name: "Github",
     url: "https://github.com/yolodevz",
-    icon: <FontAwesomeIcon icon={faGithub} className="w-8 h-8" />,
+    icon: <FontAwesomeIcon icon={faGithub} className="h-8 w-8" />,
   },
 ];
 
@@ -40,7 +40,7 @@ const SocialLinks = ({
 }) => {
   return (
     <div
-      className="inline-flex gap-4 items-center"
+      className="inline-flex items-center gap-4"
       onMouseEnter={onHover}
       onMouseLeave={onLeave}
     >
@@ -67,7 +67,7 @@ export const Footer = () => {
       outerClassName="w-full !p-4 mt-auto sticky bottom-0 after:absolute after:inset-0 after:-z-[1] after:bg-gradient-to-t after:from-black"
       innerClassName="flex justify-between items-center"
     >
-      <div className="group inline-flex gap-2 items-baseline -rotate-2">
+      <div className="inline-flex -rotate-2 items-baseline gap-2 group">
         <Logo variant="long" />
         <Text
           size="xxs"

@@ -11,17 +11,20 @@ const sizes = {
   "2xl": "2xl",
 } as const;
 
+export type Size = keyof typeof sizes;
+export type Intent =
+  | "black"
+  | "black-outlined"
+  | "bold"
+  | "medium"
+  | "regular"
+  | "light"
+  | "thin"
+  | "special";
+
 export interface ContainerProps {
-  size?: keyof typeof sizes;
-  intent?:
-    | "black"
-    | "black-outlined"
-    | "bold"
-    | "medium"
-    | "regular"
-    | "light"
-    | "thin"
-    | "special";
+  size?: Size;
+  intent?: Intent;
   className?: string;
   children: React.ReactNode;
   as?: React.ElementType;

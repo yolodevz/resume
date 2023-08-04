@@ -1,8 +1,8 @@
 import { Text } from "../../components";
 
 export const Punchline = () => (
-  <div className="relative flex-auto flex justify-center align-center overflow-hidden text-white select-none h-screen">
-    <div className="-rotate-1 w-full flex">
+  <div className="relative flex h-screen flex-auto select-none justify-center overflow-hidden text-white align-center">
+    <div className="flex w-full -rotate-1">
       <div className="uppercase animate-fade-in">
         <Text as="span" intent="black-outlined" size="3xl" className="ml-8">
           Bake

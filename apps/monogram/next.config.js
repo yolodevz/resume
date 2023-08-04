@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  transpilePackages: ["monograms-ui"],
+  transpilePackages: ["monogram-ui"],
   images: {
     domains: ["cdn.raster.app"],
   },

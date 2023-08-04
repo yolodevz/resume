@@ -1,40 +1,106 @@
-import { Text, ImageStack } from "@monogram/ui";
-import Image from "next/image";
-import mouseIcon from "../public/mouse-with-line.svg";
+"use client";
+
+import {
+  LogosGrid,
+  ContentSection,
+  ComputerSection,
+  BlocksSection,
+  SquigglyDivider,
+  Heading,
+  Footer,
+} from "@monogram/ui";
+import dynamic from "next/dynamic";
+import React from "react";
+
+import {
+  TOP_CONTENT_SECTION,
+  BOTTOM_CONTENT_SECTION,
+  PRESENTATION_SECTION,
+  COMPUTER_SECTION,
+  FOOTER_PROPS,
+} from "@/fixtures";
+
+const DynamicSphere = dynamic(
+  () =>
+    import("@monogram/ui/src/components/animated/3d/Sphere").then(
+      (mod) => mod.SphereComponent
+    ),
+  {
+    ssr: false,
+  }
+);
+
+const DynamicLogos = dynamic(
+  () =>
+    import("@monogram/ui/src/components/animated/logos").then(
+      (mod) => mod.LogosGrid
+    ),
+  {
+    ssr: false,
+  }
+);
+
+function HeaderSection() {
+  return <ContentSection {...TOP_CONTENT_SECTION} />;
+}
+
+function BottomSection() {
+  return (
+    <ContentSection
+      {...BOTTOM_CONTENT_SECTION}
+      className="mt-[20vh] sm:mt-[40vh] md:mt-[30vh]"
+    />
+  );
+}
+
+function ThreeJSSphere() {
+  return (
+    <div className="relative z-40 mx-auto mt-16 aspect-square max-w-[70%] -mb-[50%] lg:mt-32">
+      <DynamicSphere />
+    </div>
+  );
+}
+
+function PresentationSection() {
+  return (
+    <section className="bg-[#151515] padded -mb-px">
+      <div className="mx-auto max-w-7xl">
+        <Heading {...PRESENTATION_SECTION} />
+        <ThreeJSSphere />
+      </div>
+    </section>
+  );
+}
+
+function LogosSection() {
+  return (
+    <section className="bg-[#151515] relative padded">
+      <div className="container">
+        <DynamicLogos />
+      </div>
+    </section>
+  );
+}
+
+function MainContent() {
+  return (
+    <>
+      <ComputerSection {...COMPUTER_SECTION} />
+      <LogosSection />
+      <PresentationSection />
+      <SquigglyDivider />
+    </>
+  );
+}
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col px-8 sm:px-16 lg:px-32 pt-40 overflow-hidden">
-      <header className="grid grid-cols-4 max-w-7xl relative mx-auto w-full">
-        <Text
-          as="h1"
-          size="2xl"
-          intent="black"
-          className="z-10 w-full col-span-full sm:col-span-3 whitespace-nowrap"
-        >
-          jamstack 101
-        </Text>
-        <Text
-          as="p"
-          intent="light"
-          className="z-10 mt-4 lg:ml-14 md:mt-10 col-span-full md:col-span-2 text-stone-600/80 mb-16"
-        >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu augue
-          massa, tincidunt proin nunc viverra tristique tempor, ipsum. At lectus
-          vel pretium tempor ut dui vivamus sit.
-        </Text>
-        <div className="col-span-full sm:col-span-2 !col-start-1 flex justify-center z-10">
-          <Image
-            priority
-            src={mouseIcon}
-            alt="computer mouse with line"
-            className="-ml-12 text-current"
-          />
-        </div>
-        <div className="hidden sm:block col-span-full lg:col-span-2 absolute right-0 lg:right-5 top-0 h-full">
-          <ImageStack />
-        </div>
-      </header>
+    <main className="flex flex-col overflow-hidden min-h-[100svh]">
+      <HeaderSection />
+      <MainContent />
+      <BottomSection />
+      <BlocksSection />
+      <Footer {...FOOTER_PROPS} />
     </main>
   );
 }
