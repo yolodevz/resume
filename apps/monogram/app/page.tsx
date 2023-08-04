@@ -18,24 +18,22 @@ import {
   FOOTER_PROPS,
 } from "@/fixtures";
 
-function HeaderSection() {
-  return <ContentSection {...TOP_CONTENT_SECTION} />;
-}
-
-function BottomSection() {
-  return (
     <ContentSection
-      {...BOTTOM_CONTENT_SECTION}
-      className="mt-[20vh] sm:mt-[40vh] md:mt-[30vh]"
-    />
-  );
-}
-
 function ThreeJSSphere() {
   return (
     <div className="relative z-40 mx-auto mt-16 aspect-square max-w-[70%] -mb-[50%] lg:mt-32">
       <Sphere />
     </div>
+  );
+}
+
+function LogosSection() {
+  return (
+    <section className="bg-[#151515] relative padded">
+      <div className="container">
+        <LogosGrid />
+      </div>
+    </section>
   );
 }
 
@@ -50,14 +48,8 @@ function PresentationSection() {
   );
 }
 
-function LogosSection() {
-  return (
-    <section className="bg-[#151515] relative padded">
-      <div className="container">
-        <LogosGrid />
-      </div>
-    </section>
-  );
+function HeaderSection() {
+  return <ContentSection {...TOP_CONTENT_SECTION} className="md:mt-40" />;
 }
 
 function MainContent() {
@@ -68,6 +60,15 @@ function MainContent() {
       <PresentationSection />
       <SquigglyDivider />
     </>
+  );
+}
+
+function BottomSection() {
+  return (
+    <ContentSection
+      {...BOTTOM_CONTENT_SECTION}
+      className="mt-[20vh] sm:mt-[50vh] 3xl:mt-[30vh]"
+    />
   );
 }
 
