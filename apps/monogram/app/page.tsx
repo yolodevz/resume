@@ -1,5 +1,3 @@
-"use client";
-
 import {
   LogosGrid,
   ContentSection,
@@ -8,8 +6,8 @@ import {
   SquigglyDivider,
   Heading,
   Footer,
+  Sphere,
 } from "@monogram/ui";
-import dynamic from "next/dynamic";
 import React from "react";
 
 import {
@@ -19,26 +17,6 @@ import {
   COMPUTER_SECTION,
   FOOTER_PROPS,
 } from "@/fixtures";
-
-const DynamicSphere = dynamic(
-  () =>
-    import("@monogram/ui/src/components/animated/3d/Sphere").then(
-      (mod) => mod.SphereComponent
-    ),
-  {
-    ssr: false,
-  }
-);
-
-const DynamicLogos = dynamic(
-  () =>
-    import("@monogram/ui/src/components/animated/logos").then(
-      (mod) => mod.LogosGrid
-    ),
-  {
-    ssr: false,
-  }
-);
 
 function HeaderSection() {
   return <ContentSection {...TOP_CONTENT_SECTION} />;
@@ -56,7 +34,7 @@ function BottomSection() {
 function ThreeJSSphere() {
   return (
     <div className="relative z-40 mx-auto mt-16 aspect-square max-w-[70%] -mb-[50%] lg:mt-32">
-      <DynamicSphere />
+      <Sphere />
     </div>
   );
 }
@@ -76,7 +54,7 @@ function LogosSection() {
   return (
     <section className="bg-[#151515] relative padded">
       <div className="container">
-        <DynamicLogos />
+        <LogosGrid />
       </div>
     </section>
   );
