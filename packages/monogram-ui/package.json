@@ -46,6 +46,7 @@
     "next": "^13.4.12",
     "react-device-detect": "^2.2.3",
     "react-error-boundary": "^3.1.4",
+    "react-intersection-observer": "^9.5.2",
     "three": "^0.155.0",
     "utils": "workspace:*"
   },
