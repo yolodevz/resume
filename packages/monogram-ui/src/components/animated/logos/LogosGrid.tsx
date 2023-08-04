@@ -26,35 +26,20 @@ const MAPPED_LOGOS = {
   vue: VueLogo,
 };
 
-function getRandomLogos() {
-  const keys: (keyof typeof MAPPED_LOGOS)[] = [
-    "next",
-    "react",
-    "svelte",
-    "vue",
-    "next",
-    "react",
-    "svelte",
-    "vue",
-    "next",
-    "react",
-    "svelte",
-    "vue",
-  ];
-  return keys.sort(() => Math.random() - 0.5);
-}
-
-const RandomLogos = () => {
-  return (
-    <>
-      {getRandomLogos()
-        .map((key) => MAPPED_LOGOS[key])
-        .map((logo, index) => {
-          return <Logo key={index} imageUrl={logo.src} />;
-        })}
-    </>
-  );
-};
+const LOGOS_KEYS: (keyof typeof MAPPED_LOGOS)[] = [
+  "next",
+  "react",
+  "svelte",
+  "vue",
+  "next",
+  "react",
+  "svelte",
+  "vue",
+  "next",
+  "react",
+  "svelte",
+  "vue",
+];
 
 interface LogoProps {
   imageUrl: string;
@@ -148,7 +133,9 @@ export const LogosGrid: React.FC = () => {
     >
       {/*This script isn't added globally, because it's only used by this component so far*/}
       <Script src={SCROLL_TIMELINE_POLYFILL} />
-      <RandomLogos />
+      {LOGOS_KEYS.map((key, index) => (
+        <Logo key={index} imageUrl={MAPPED_LOGOS[key].src} />
+      ))}
     </div>
   );
 };
