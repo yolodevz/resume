@@ -75,19 +75,19 @@ export const ListWithComments = ({ className }: IListWithComments) => {
       innerClassName="flex mt-[30vh] items-center justify-center"
     >
       <div className="w-full lg:w-auto">
-        <div className="prose prose-slate mb-8 w-full max-w-max">
+        <div className="mb-8 w-full max-w-max prose prose-slate">
           <pre className="!bg-zinc-900">
             <code className="text-gray-500">
               <p className="m-0">{`/**`}</p>
               <p className="m-0">
                 *
-                <span className="text-amber-200 ml-2 pr-4">{`@TODO - find time to bake a good portfolio page`}</span>
+                <span className="ml-2 pr-4 text-amber-200">{`@TODO - find time to bake a good portfolio page`}</span>
               </p>
               <p className="m-0">{`/*`}</p>
             </code>
           </pre>
         </div>
-        <ul role="list" className="space-y-6 max-w-max">
+        <ul role="list" className="max-w-max space-y-6">
           {activity.map((activityItem, activityItemIdx) => (
             <li key={activityItem.id} className="relative flex gap-x-4">
               <div
@@ -105,7 +105,7 @@ export const ListWithComments = ({ className }: IListWithComments) => {
                     className={cx(styledDot({ intent: activityItem.type }))}
                   />
                 </div>
-                <p className="flex-auto py-0.5 text-xs leading-5 text-gray-400">
+                <p className="flex-auto text-xs leading-5 text-gray-400 py-0.5">
                   <span
                     className={cx(styledStatus({ intent: activityItem.type }))}
                   >
