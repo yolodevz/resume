@@ -1,4 +1,10 @@
-import { ScoreGrid, type ScoreGridProps, Text } from "../../components";
+import dynamic from "next/dynamic";
+
+import { type ScoreGridProps, Text } from "../../components";
+
+const DynamicScoreGrid = dynamic(
+  () => import("../../components/animated/score/Score")
+);
 
 type FooterProps = {
   scores: ScoreGridProps["scores"];
@@ -24,7 +30,7 @@ export const Footer = ({ scores, title, texts, footerNote }: FooterProps) => (
         >
           {title}
         </Text>
-        <ScoreGrid scores={scores} />
+        <DynamicScoreGrid scores={scores} />
         <div className="text-[#C7C7C7] mx-auto prose mt-10 sm:mt-16 lg:mt-24 opacity-50 mix-blend-color-dodge sm:max-w-xl lg:max-w-3xl">
           {texts.map((text, index) => (
             <Text key={index} size="md">

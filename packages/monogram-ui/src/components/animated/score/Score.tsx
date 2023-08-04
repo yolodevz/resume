@@ -93,3 +93,5 @@ export const ScoreGrid = ({ className, scores }: ScoreGridProps) => (
     ))}
   </div>
 );
+
+export default ScoreGrid;
