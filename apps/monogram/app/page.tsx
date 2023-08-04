@@ -18,7 +18,6 @@ import {
   FOOTER_PROPS,
 } from "@/fixtures";
 
-    <ContentSection
 function ThreeJSSphere() {
   return (
     <div className="relative z-40 mx-auto mt-16 aspect-square max-w-[70%] -mb-[50%] lg:mt-32">
