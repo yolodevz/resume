@@ -2,7 +2,7 @@ import {
   // LogosGrid,
   ContentSection,
   // ComputerSection,
-  // BlocksSection,
+  BlocksSection,
   // SquigglyDivider,
   // Heading,
   // Footer,
@@ -77,7 +77,7 @@ export default function Home() {
       <HeaderSection />
       {/*<MainContent />*/}
       <BottomSection />
-      {/*<BlocksSection />*/}
+      <BlocksSection />
       {/*<Footer {...FOOTER_PROPS} />*/}
     </main>
   );
