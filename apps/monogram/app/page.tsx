@@ -1,7 +1,7 @@
 import {
   // LogosGrid,
   ContentSection,
-  // ComputerSection,
+  ComputerSection,
   BlocksSection,
   SquigglyDivider,
   // Heading,
@@ -14,7 +14,7 @@ import {
   TOP_CONTENT_SECTION,
   BOTTOM_CONTENT_SECTION,
   // PRESENTATION_SECTION,
-  // COMPUTER_SECTION,
+  COMPUTER_SECTION,
   // FOOTER_PROPS,
 } from "@/fixtures";
 
@@ -54,7 +54,7 @@ function HeaderSection() {
 function MainContent() {
   return (
     <>
-      {/*<ComputerSection {...COMPUTER_SECTION} />*/}
+      <ComputerSection {...COMPUTER_SECTION} />
       {/*<LogosSection />*/}
       {/*<PresentationSection />*/}
       <SquigglyDivider />
