@@ -16,9 +16,6 @@ import {
 function Sphere() {
   const ref = useRef<THREE.Mesh>(null);
   const [hovered, hover] = useState(false);
-  const { roughness } = useControls({
-    roughness: { value: 1, min: 0, max: 1 },
-  });
 
   useCursor(hovered);
   useFrame(() => {
@@ -43,7 +40,7 @@ function Sphere() {
         onPointerOut={() => hover(false)}
       >
         <sphereGeometry args={[0.75, 64, 64]} />
-        <MeshDistortMaterial speed={3} roughness={roughness}>
+        <MeshDistortMaterial speed={3} roughness={1}>
           <GradientTexture
             stops={[0.2, 0.6, 1]}
             colors={[
@@ -65,11 +62,6 @@ function Sphere() {
  * @todo add plastered logos
  */
 const SphereComponent2 = () => {
-  const { blur } = useControls({
-    blur: { value: 0.65, min: 0, max: 1 },
-    preset: "studio",
-  });
-
   return (
     <Canvas shadows camera={{ position: [0, 0, 2], fov: 50 }}>
       <group position={[0, 0, 0]}>
@@ -83,7 +75,7 @@ const SphereComponent2 = () => {
         minPolarAngle={Math.PI / 2.1}
         maxPolarAngle={Math.PI / 2.1}
       />
-      <Environment blur={blur} preset={"warehouse"} />
+      <Environment blur={1} preset={"warehouse"} />
     </Canvas>
   );
 };

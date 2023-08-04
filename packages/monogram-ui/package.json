@@ -30,7 +30,6 @@
     "eslint": "^7.32.0",
     "eslint-config-custom": "workspace:*",
     "eslint-plugin-storybook": "^0.6.13",
-    "leva": "^0.9.35",
     "postcss": "^8.4.24",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
