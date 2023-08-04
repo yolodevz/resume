@@ -6,7 +6,6 @@ import {
   BlocksSection,
   SquigglyDivider,
   Heading,
-  // Footer,
   // Sphere,
 } from "@monogram/ui";
 import React from "react";
@@ -14,7 +13,7 @@ import React from "react";
 import {
   TOP_CONTENT_SECTION,
   BOTTOM_CONTENT_SECTION,
-  // PRESENTATION_SECTION,
+  PRESENTATION_SECTION,
   COMPUTER_SECTION,
   FOOTER_PROPS,
 } from "@/fixtures";
@@ -45,16 +44,16 @@ function LogosSection() {
   );
 }
 
-// function PresentationSection() {
-//   return (
-//     <section className="bg-[#151515] padded -mb-px">
-//       <div className="mx-auto max-w-7xl">
-//         <Heading {...PRESENTATION_SECTION} />
-//         <ThreeJSSphere />
-//       </div>
-//     </section>
-//   );
-// }
+function PresentationSection() {
+  return (
+    <section className="bg-[#151515] padded -mb-px">
+      <div className="mx-auto max-w-7xl">
+        <Heading {...PRESENTATION_SECTION} />
+        {/*<ThreeJSSphere />*/}
+      </div>
+    </section>
+  );
+}
 
 function HeaderSection() {
   return <ContentSection {...TOP_CONTENT_SECTION} className="md:mt-40" />;
@@ -65,7 +64,7 @@ function MainContent() {
     <>
       <ComputerSection {...COMPUTER_SECTION} />
       <LogosSection />
-      {/*<PresentationSection />*/}
+      <PresentationSection />
       <SquigglyDivider />
     </>
   );
