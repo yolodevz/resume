@@ -6,7 +6,6 @@ import {
   BlocksSection,
   SquigglyDivider,
   Heading,
-  // Sphere,
 } from "@monogram/ui";
 import React from "react";
 
@@ -53,7 +52,7 @@ function PresentationSection() {
     <section className="bg-[#151515] padded -mb-px">
       <div className="mx-auto max-w-7xl">
         <Heading {...PRESENTATION_SECTION} />
-        {/*<ThreeJSSphere />*/}
+        <ThreeJSSphere />
       </div>
     </section>
   );
