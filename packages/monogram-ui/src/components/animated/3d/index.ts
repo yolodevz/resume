@@ -1,1 +1,1 @@
-export { SphereComponent as Sphere } from "./Sphere";
+export { Sphere } from "./Sphere";

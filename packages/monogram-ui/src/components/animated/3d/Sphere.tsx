@@ -12,7 +12,7 @@ import {
   OrbitControls,
 } from "@react-three/drei";
 
-function Sphere() {
+function SphereObject() {
   const ref = useRef<THREE.Mesh>(null);
   const [hovered, hover] = useState(false);
 
@@ -60,11 +60,11 @@ function Sphere() {
  * @todo add glowing effect
  * @todo add plastered logos
  */
-const SphereComponent2 = () => {
+export const Sphere = () => {
   return (
     <Canvas shadows camera={{ position: [0, 0, 2], fov: 50 }}>
       <group position={[0, 0, 0]}>
-        <Sphere />
+        <SphereObject />
       </group>
       <OrbitControls
         autoRotate
@@ -78,5 +78,3 @@ const SphereComponent2 = () => {
     </Canvas>
   );
 };
-
-export const SphereComponent = React.memo(SphereComponent2);
