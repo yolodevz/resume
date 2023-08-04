@@ -22,17 +22,21 @@ const DynamicScoreGrid = dynamic(
   () => import("@monogram/ui/src/components/animated/logos/LogosGrid")
 );
 
+const DynamicThreeJSSphere = dynamic(
+  () => import("@monogram/ui/src/components/animated/3d/Sphere")
+);
+
 const DynamicFooter = dynamic(() =>
   import("@monogram/ui/src/slices/footer/Footer").then((mod) => mod.Footer)
 );
 
-// function ThreeJSSphere() {
-//   return (
-//     <div className="relative z-40 mx-auto mt-16 aspect-square max-w-[70%] -mb-[50%] lg:mt-32">
-//       <Sphere />
-//     </div>
-//   );
-// }
+function ThreeJSSphere() {
+  return (
+    <div className="relative z-40 mx-auto mt-16 aspect-square max-w-[70%] -mb-[50%] lg:mt-32">
+      <DynamicThreeJSSphere />
+    </div>
+  );
+}
 
 function LogosSection() {
   return (

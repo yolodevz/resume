@@ -1,42 +1,36 @@
 "use client";
 
-import React, { useState, useRef } from "react";
-import * as THREE from "three";
-import { Canvas, useFrame } from "@react-three/fiber";
+// Don't include THREE in the bundle and use @react-three instead if possible.
+import React, { useRef } from "react";
+import { Canvas, useFrame, type MeshProps } from "@react-three/fiber";
 import {
   MeshDistortMaterial,
   GradientTexture,
-  useCursor,
   Center,
   Environment,
   OrbitControls,
 } from "@react-three/drei";
 
 function SphereObject() {
-  const ref = useRef<THREE.Mesh>(null);
-  const [hovered, hover] = useState(false);
+  const meshRef = useRef<any>(null);
 
-  useCursor(hovered);
-  useFrame(() => {
-    if (ref.current && ref.current.material) {
-      const material = ref.current.material as THREE.Material & {
-        distort: number;
+  // use useFrame hook to get performant animations (instead of doing it with react hooks)
+  useFrame((state) => {
+    if (meshRef.current) {
+      const material = meshRef.current.material as MeshProps & {
+        distort?: number;
       };
-
-      material.distort = THREE.MathUtils.lerp(
-        material.distort,
-        hovered ? 0.3 : 0,
-        hovered ? 0.05 : 0.01
-      );
+      const elapsedTime = state.clock.getElapsedTime();
+      material.distort = (1 + Math.sin(elapsedTime * 0.5)) * 0.15;
     }
   });
 
   return (
     <Center>
       <mesh
-        ref={ref}
-        onPointerOver={() => hover(true)}
-        onPointerOut={() => hover(false)}
+        ref={meshRef}
+        onPointerOver={() => ((meshRef.current?.material as any).distort = 0.3)} // manipulate the object directly to avoid additional state management
+        onPointerOut={() => ((meshRef.current?.material as any).distort = 0)}
       >
         <sphereGeometry args={[0.75, 64, 64]} />
         <MeshDistortMaterial speed={3} roughness={1}>
@@ -55,17 +49,10 @@ function SphereObject() {
   );
 }
 
-/**
- * @description 3D scene containing the interactive Gradient Sphere.
- * @todo add glowing effect
- * @todo add plastered logos
- */
 export const Sphere = () => {
   return (
     <Canvas shadows camera={{ position: [0, 0, 2], fov: 50 }}>
-      <group position={[0, 0, 0]}>
-        <SphereObject />
-      </group>
+      <SphereObject />
       <OrbitControls
         autoRotate
         autoRotateSpeed={4}
@@ -78,3 +65,5 @@ export const Sphere = () => {
     </Canvas>
   );
 };
+
+export default Sphere;
