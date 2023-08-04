@@ -5,7 +5,7 @@ import {
   BlocksSection,
   SquigglyDivider,
   // Heading,
-  // Footer,
+  Footer,
   // Sphere,
 } from "@monogram/ui";
 import React from "react";
@@ -15,7 +15,7 @@ import {
   BOTTOM_CONTENT_SECTION,
   // PRESENTATION_SECTION,
   COMPUTER_SECTION,
-  // FOOTER_PROPS,
+  FOOTER_PROPS,
 } from "@/fixtures";
 
 // function ThreeJSSphere() {
@@ -78,7 +78,7 @@ export default function Home() {
       <MainContent />
       <BottomSection />
       <BlocksSection />
-      {/*<Footer {...FOOTER_PROPS} />*/}
+      <Footer {...FOOTER_PROPS} />
     </main>
   );
 }
