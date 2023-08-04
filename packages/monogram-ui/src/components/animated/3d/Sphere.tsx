@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState, useRef } from "react";
-import { useControls } from "leva";
 import * as THREE from "three";
 import { Canvas, useFrame } from "@react-three/fiber";
 import {
