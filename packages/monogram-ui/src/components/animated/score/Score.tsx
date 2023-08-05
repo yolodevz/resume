@@ -11,7 +11,10 @@ interface ScoreProps {
 }
 
 export const Score = ({ value }: ScoreProps) => {
-  const [inViewRef, inView] = useInView({ rootMargin: "0px 0px -10% 0px" });
+  const [inViewRef, inView] = useInView({
+    triggerOnce: true,
+    rootMargin: "0px 0px -10% 0px",
+  });
   const [animatedValue, setAnimatedValue] = useState(0);
 
   useEffect(() => {
