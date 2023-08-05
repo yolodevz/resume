@@ -47,7 +47,11 @@ function SphereObject() {
 }
 
 export const Sphere = () => {
-  const { ref, inView } = useInView({ threshold: 0 });
+  const { ref, inView } = useInView({
+    threshold: 0,
+    triggerOnce: true,
+    rootMargin: "0px 0px 100% 0px",
+  });
 
   return (
     <div ref={ref} className="h-full">

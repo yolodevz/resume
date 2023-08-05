@@ -1,6 +1,8 @@
 "use client";
 
-import React, { useRef, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
+
+import { useInView } from "react-intersection-observer";
 
 import { cx } from "class-variance-authority";
 
@@ -9,52 +11,32 @@ interface ScoreProps {
 }
 
 export const Score = ({ value }: ScoreProps) => {
-  const scoreRef = useRef<HTMLDivElement>(null);
+  const [inViewRef, inView] = useInView({ rootMargin: "0px 0px -10% 0px" });
   const [animatedValue, setAnimatedValue] = useState(0);
 
-  // I could use react-intersection-observer and make it look nicer, but this is the only place I'm using it, so I'm just using the native API
   useEffect(() => {
-    const handleAnimation = (
-      entries: IntersectionObserverEntry[],
-      observer: IntersectionObserver
-    ) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          let start: number | null = null;
+    if (inView) {
+      let start: number | null = null;
 
-          const animate = (timestamp: number) => {
-            if (start === null) start = timestamp;
-            const progress = timestamp - start;
-            const currentVal = (value * progress) / 1000;
+      const animate = (timestamp: number) => {
+        if (start === null) start = timestamp;
+        const progress = timestamp - start;
+        const currentVal = (value * progress) / 1000;
 
-            setAnimatedValue(currentVal > value ? value : currentVal);
+        setAnimatedValue(currentVal > value ? value : currentVal);
 
-            if (currentVal < value) {
-              requestAnimationFrame(animate);
-            }
-          };
-
+        if (currentVal < value) {
           requestAnimationFrame(animate);
-          observer.unobserve(entry.target);
         }
-      });
-    };
+      };
 
-    // We want to start animation slightly after the element is visible
-    const observer = new IntersectionObserver(handleAnimation, {
-      rootMargin: "0px 0px -10% 0px",
-    });
-
-    if (scoreRef.current) {
-      observer.observe(scoreRef.current);
+      requestAnimationFrame(animate);
     }
-
-    return () => observer.disconnect();
-  }, [value]);
+  }, [inView, value]);
 
   return (
     <div
-      ref={scoreRef}
+      ref={inViewRef}
       className="border-4 border-[#EFFFE2]/30 rounded-full drop-shadow-score aspect-square w-full h-full"
     >
       <div
