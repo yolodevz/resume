@@ -1,42 +1,33 @@
 "use client";
 
-import React, { useState, useRef } from "react";
-import * as THREE from "three";
+import React, { useRef } from "react";
+import { useInView } from "react-intersection-observer";
 import { Canvas, useFrame } from "@react-three/fiber";
 import {
   MeshDistortMaterial,
   GradientTexture,
-  useCursor,
   Center,
   Environment,
   OrbitControls,
 } from "@react-three/drei";
 
 function SphereObject() {
-  const ref = useRef<THREE.Mesh>(null);
-  const [hovered, hover] = useState(false);
+  const meshRef = useRef<any>(null);
 
-  useCursor(hovered);
-  useFrame(() => {
-    if (ref.current && ref.current.material) {
-      const material = ref.current.material as THREE.Material & {
-        distort: number;
-      };
-
-      material.distort = THREE.MathUtils.lerp(
-        material.distort,
-        hovered ? 0.3 : 0,
-        hovered ? 0.05 : 0.01
-      );
+  useFrame((state) => {
+    if (meshRef.current) {
+      const material = meshRef.current.material as any;
+      const elapsedTime = state.clock.getElapsedTime();
+      material.distort = (1 + Math.sin(elapsedTime * 0.5)) * 0.15;
     }
   });
 
   return (
     <Center>
       <mesh
-        ref={ref}
-        onPointerOver={() => hover(true)}
-        onPointerOut={() => hover(false)}
+        ref={meshRef}
+        onPointerOver={() => (meshRef.current.material.distort = 0.3)}
+        onPointerOut={() => (meshRef.current.material.distort = 0)}
       >
         <sphereGeometry args={[0.75, 64, 64]} />
         <MeshDistortMaterial speed={3} roughness={1}>
@@ -55,26 +46,32 @@ function SphereObject() {
   );
 }
 
-/**
- * @description 3D scene containing the interactive Gradient Sphere.
- * @todo add glowing effect
- * @todo add plastered logos
- */
 export const Sphere = () => {
+  const { ref, inView } = useInView({
+    threshold: 0,
+    triggerOnce: true,
+    rootMargin: "0px 0px 100% 0px",
+  });
+
   return (
-    <Canvas shadows camera={{ position: [0, 0, 2], fov: 50 }}>
-      <group position={[0, 0, 0]}>
-        <SphereObject />
-      </group>
-      <OrbitControls
-        autoRotate
-        autoRotateSpeed={4}
-        enablePan={false}
-        enableZoom={false}
-        minPolarAngle={Math.PI / 2.1}
-        maxPolarAngle={Math.PI / 2.1}
-      />
-      <Environment blur={1} preset={"warehouse"} />
-    </Canvas>
+    <div ref={ref} className="h-full">
+      {inView && (
+        <Canvas shadows camera={{ position: [0, 0, 2], fov: 50 }}>
+          <SphereObject />
+          <OrbitControls
+            autoRotate
+            autoRotateSpeed={4}
+            enablePan={false}
+            enableZoom={false}
+            minZoom={2}
+            minPolarAngle={Math.PI / 2.1}
+            maxPolarAngle={Math.PI / 2.1}
+          />
+          <Environment blur={1} preset={"warehouse"} />
+        </Canvas>
+      )}
+    </div>
   );
 };
+
+export default Sphere;

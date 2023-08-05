@@ -1,12 +1,11 @@
+import dynamic from "next/dynamic";
+
 import {
-  LogosGrid,
   ContentSection,
   ComputerSection,
   BlocksSection,
   SquigglyDivider,
   Heading,
-  Footer,
-  Sphere,
 } from "@monogram/ui";
 import React from "react";
 
@@ -18,10 +17,22 @@ import {
   FOOTER_PROPS,
 } from "@/fixtures";
 
+const DynamicScoreGrid = dynamic(
+  () => import("@monogram/ui/src/components/animated/logos/LogosGrid")
+);
+
+const DynamicThreeJSSphere = dynamic(
+  () => import("@monogram/ui/src/components/animated/3d/Sphere")
+);
+
+const DynamicFooter = dynamic(() =>
+  import("@monogram/ui/src/slices/footer/Footer").then((mod) => mod.Footer)
+);
+
 function ThreeJSSphere() {
   return (
     <div className="relative z-40 mx-auto mt-16 aspect-square max-w-[70%] -mb-[50%] lg:mt-32">
-      <Sphere />
+      <DynamicThreeJSSphere />
     </div>
   );
 }
@@ -30,7 +41,7 @@ function LogosSection() {
   return (
     <section className="bg-[#151515] relative padded">
       <div className="container">
-        <LogosGrid />
+        <DynamicScoreGrid />
       </div>
     </section>
   );
@@ -78,7 +89,7 @@ export default function Home() {
       <MainContent />
       <BottomSection />
       <BlocksSection />
-      <Footer {...FOOTER_PROPS} />
+      <DynamicFooter {...FOOTER_PROPS} />
     </main>
   );
 }
