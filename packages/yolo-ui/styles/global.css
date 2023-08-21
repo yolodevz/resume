@@ -6,6 +6,18 @@
 @tailwind utilities;
 
 
-body {
-    font-family: 'madeType-outerSans-light', sans-serif;
+@layer base {
+    body {
+        font-family: 'madeType-outerSans-light', sans-serif;
+        @apply text-body-sm;
+    }
+
+    :root {
+        --color-background-primary: 60deg 100% 98%;
+        --color-background-secondary: 0deg 0% 15%;
+
+        --color-foreground-primary: 0deg 0% 20%;
+        --color-foreground-secondary: 0deg 0% 100%;
+        --color-foreground-tertiary: 0deg 0% 56%;
+    }
 }

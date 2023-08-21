@@ -4,27 +4,36 @@ import React from "react";
 import { cx, cva } from "class-variance-authority";
 
 const sizes = {
-  xxs: "xxs",
-  xs: "xs",
-  sm: "sm",
-  base: "sm",
-  lg: "lg",
-  xl: "xl",
-  "2xl": "2xl",
-  "3xl": "3xl",
+  // H1
+  h1: "text-h1",
+  "h1-lg": "text-h1-lg",
+  // H2
+  "h2-xs": "text-h2-xs",
+  "h2-sm": "text-h2-sm",
+  h2: "text-h2",
+  "h2-md": "text-h2-md",
+  "h2-lg": "text-h2-lg",
+  // Body
+  "body-sm": "text-body-sm",
+  body: "text-body",
+  // Deco
+  "deco-xs": "text-deco-xs",
+  "deco-sm": "text-deco-sm",
+  deco: "text-deco",
+  "deco-md": "text-deco-md",
+  "deco-lg": "text-deco-lg",
 } as const;
+
+const intents = {
+  black: "font-black",
+  "black-outlined": "font-black-outlined",
+  bold: "font-bold",
+  regular: "font-regular",
+};
 
 export interface ContainerProps {
   size?: keyof typeof sizes;
-  intent?:
-    | "black"
-    | "black-outlined"
-    | "bold"
-    | "medium"
-    | "regular"
-    | "light"
-    | "thin"
-    | "special";
+  intent?: keyof typeof intents;
   className?: string;
   children: React.ReactNode;
   as?: React.ElementType;
@@ -32,35 +41,17 @@ export interface ContainerProps {
 
 const styledText = cva("", {
   variants: {
-    size: {
-      xxs: "text-fluid-xxs",
-      xs: "text-fluid-xs",
-      sm: "text-fluid-sm",
-      base: "text-fluid-base",
-      lg: "text-fluid-lg",
-      xl: "text-fluid-xl",
-      "2xl": "text-fluid-2xl",
-      "3xl": "text-fluid-3xl",
-    },
-    intent: {
-      black: "font-black",
-      "black-outlined": "font-black-outlined",
-      bold: "font-bold",
-      medium: "font-medium",
-      regular: "font-regular",
-      light: "font-light",
-      thin: "font-thin",
-      special: "font-special",
-    },
+    size: sizes,
+    intent: intents,
   },
   defaultVariants: {
-    size: "base",
+    size: "body",
     intent: "regular",
   },
 });
 
 export const Text = ({
-  size = "base",
+  size = "body",
   intent = "regular",
   className,
   children,
