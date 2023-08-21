@@ -35,7 +35,7 @@ const sizeClasses = {
 };
 
 export const Container = ({
-  size = "lg",
+  size = "full",
   innerClassName,
   outerClassName,
   id,
@@ -47,7 +47,7 @@ export const Container = ({
     <section
       id={id}
       className={cx(
-        "scroll-m-[50vh] overflow-x-clip px-4 md:px-0 mx-auto grid grid-cols-12",
+        "w-full scroll-m-[50vh] overflow-x-clip px-5 lg:px-10 mx-auto grid grid-cols-12",
         outerClassName
       )}
       {...props}
