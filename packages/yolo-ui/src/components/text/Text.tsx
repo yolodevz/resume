@@ -39,7 +39,7 @@ export interface ContainerProps {
   as?: React.ElementType;
 }
 
-const styledText = cva("", {
+const styledText = cva("leading-none", {
   variants: {
     size: sizes,
     intent: intents,
