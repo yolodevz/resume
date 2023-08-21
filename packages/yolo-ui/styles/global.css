@@ -8,7 +8,7 @@
 
 @layer base {
     body {
-        font-family: 'madeType-outerSans-light', sans-serif;
+        font-family: 'helvetica', sans-serif;
         @apply text-body-sm text-foreground-primary;
     }
 

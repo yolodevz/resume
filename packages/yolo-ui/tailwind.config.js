@@ -19,10 +19,15 @@ module.exports = {
         },
       },
       fontFamily: {
+        impact: ["var(--font-impact)"],
+        helvetica: ["var(--font-helvetica)"],
         black: ["madeType-outerSans-black", "sans-serif"],
         light: ["madeType-outerSans-light", "sans-serif"],
         "black-outlined": ["madeType-outerSans-black-outlined", "sans-serif"],
         special: ["Dorsa", "sans-serif"],
+      },
+      borderRadius: {
+        "2.5xl": "20px",
       },
       animation: {
         "fade-in": "fade-in .3s ease-in .2s 1 backwards",

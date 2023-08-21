@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+
+import { impact, helvetica } from "../fonts/local";
 
 import "@yolo/ui/styles/global.css";
 
@@ -9,8 +10,6 @@ export const metadata: Metadata = {
 CSS Connoisseur & Tech Transitioner`,
 };
 
-const inter = Inter({ subsets: ["latin"] });
-
 export default function RootLayout({
   children,
 }: {
@@ -19,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`flex min-h-screen flex-col bg-background-primary ${inter.className}`}
+        className={`flex min-h-screen flex-col bg-background-primary ${impact.variable} ${helvetica.variable}`}
       >
         {children}
       </body>
