@@ -5,7 +5,6 @@ import * as React from "react";
 import { cx } from "class-variance-authority";
 
 import { Container, Text } from "../../components";
-import { Logo } from "../logo";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
@@ -68,7 +67,6 @@ export const Footer = () => {
       innerClassName="flex justify-between items-center"
     >
       <div className="inline-flex -rotate-2 items-baseline gap-2 group">
-        <Logo variant="long" />
         <Text
           size="xxs"
           className={cx(
