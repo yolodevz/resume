@@ -1,0 +1,1 @@
+export { HeroSlice } from "./HeroSlice";

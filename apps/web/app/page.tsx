@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-import { Header, Footer } from "@yolo/ui";
+import { Header, Footer, HeroSlice } from "@yolo/ui";
 
 import { Pendo } from "../components/analytics";
 
@@ -12,6 +12,7 @@ export default function Page() {
       <Pendo />
       <Head>{!isDevelopment && <Pendo />}</Head>
       <Header />
+      <HeroSlice />
       <Footer />
     </>
   );
