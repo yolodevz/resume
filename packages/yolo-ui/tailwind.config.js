@@ -4,6 +4,9 @@ module.exports = {
   content: ["./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      screens: {
+        container: "1440px",
+      },
       colors: {
         background: {
           primary: "hsl(var(--color-background-primary) / <alpha-value>)",
