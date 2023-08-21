@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-import { Header, PunchlineV2, Footer } from "@yolo/ui";
+import { Header, Footer } from "@yolo/ui";
 
 import { Pendo } from "../components/analytics";
 
