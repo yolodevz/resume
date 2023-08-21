@@ -54,7 +54,7 @@ export const Container = ({
     >
       <Component
         className={cx(
-          `col-span-full max-w-screen-xl w-full mx-auto ${sizeClasses[size]}`,
+          `col-span-full max-w-screen-container w-full mx-auto ${sizeClasses[size]}`,
           innerClassName
         )}
       >

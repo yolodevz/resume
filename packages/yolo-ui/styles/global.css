@@ -9,7 +9,7 @@
 @layer base {
     body {
         font-family: 'madeType-outerSans-light', sans-serif;
-        @apply text-body-sm;
+        @apply text-body-sm text-foreground-primary;
     }
 
     :root {
