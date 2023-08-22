@@ -73,6 +73,22 @@ export const HeroSlice = () => {
     return () => clearInterval(timer);
   }, [isHovered]);
 
+  const preloadImages = (
+    imageSrcs: { first: { src: string }; second: { src: string } }[]
+  ) => {
+    imageSrcs.forEach((imageSet) => {
+      const img1 = document.createElement("img");
+      img1.src = imageSet.first.src;
+
+      const img2 = document.createElement("img");
+      img2.src = imageSet.second.src;
+    });
+  };
+
+  React.useEffect(() => {
+    preloadImages(imagesSrcs);
+  }, []);
+
   return (
     <Container outerClassName="pt-60">
       <Text size="h2-lg" className="uppercase font-bold mb-4">
@@ -95,6 +111,7 @@ export const HeroSlice = () => {
               height={153}
               alt={imageSet.first.alt}
               src={imageSet.first.src}
+              priority
             />
           </div>
           <div className="flex -mr-[10%]">
@@ -103,6 +120,7 @@ export const HeroSlice = () => {
               height={153}
               alt={imageSet.second.alt}
               src={imageSet.second.src}
+              priority
             />
           </div>
         </div>
