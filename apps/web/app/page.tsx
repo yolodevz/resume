@@ -14,6 +14,7 @@ export default function Page() {
       <Head>{!isDevelopment && <Pendo />}</Head>
       <Header />
       <HeroSlice />
+      <div className="grid place-items-center h-[20svh]">in progress</div>
       <Footer />
     </>
   );

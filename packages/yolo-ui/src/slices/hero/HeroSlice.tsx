@@ -64,7 +64,7 @@ export const HeroSlice = () => {
   const imageSet = imagesSrcs[currentIndex];
 
   React.useEffect(() => {
-    if (isHovered) return; // Do not start the interval if hovered
+    if (!isHovered) return; // Do not start the interval if hovered
 
     const timer = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % imagesSrcs.length);
