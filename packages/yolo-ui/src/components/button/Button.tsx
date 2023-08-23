@@ -2,7 +2,7 @@ import * as React from "react";
 import Link from "next/link";
 import { cva } from "class-variance-authority";
 
-const buttonStyle = cva("border px-5 py-2.5 rounded-full w-max", {
+const buttonStyle = cva("border px-5 py-2.5 rounded-full w-max text-sm", {
   variants: {
     isDisabled: {
       false: null,
@@ -70,5 +70,5 @@ export const Button = (props: ButtonProps) => {
 };
 
 export const ButtonGroup = ({ children }: { children: React.ReactNode }) => (
-  <div className="flex gap-x-5">{children}</div>
+  <div className="flex gap-x-3 md:gap-x-5">{children}</div>
 );
