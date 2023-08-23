@@ -234,8 +234,8 @@ export const TimelineSlice: React.FC = () => {
         work experience timeline
       </Text>
       <div className="overflow-x-scroll no-scrollbar pr-5 -mr-5">
-        <div className="flex gap-x-16 md:gap-x-32 w-max relative">
-          <div className="border-b border-foreground-primary h-px w-full absolute bottom-[2.5px]" />
+        <div className="flex gap-x-16 md:gap-x-32 w-max relative pr-5 -mr-5">
+          <div className="border-b border-foreground-primary h-px w-full absolute bottom-[2.5px] pr-5 -mr-5 right-10" />
           {Object.keys(data)
             .reverse()
             .map((year) => (
