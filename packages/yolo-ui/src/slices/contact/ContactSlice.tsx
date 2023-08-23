@@ -31,20 +31,11 @@ const imageSet = {
 export const ContactSlice = () => (
   <Container innerClassName="flex flex-col gap-y-5">
     <ImageStack imageSet={imageSet} heading="contact" />
-    <div className="flex justify-between flex-wrap items-center">
-      <Image
-        className="hidden lg:block rounded-2.5xl"
-        src="https://cdn.raster.app/v327tq6nmjmw2o/resume/ONixvHjxHvf?ixlib=js-3.8.0&s=fb100a441a18195b28f0cc4caa5102fc"
-        alt="two hikers walking in the mountains"
-        width={325}
-        height={80}
-      />
-      <Text
-        size="deco-sm"
-        className="uppercase font-impact text-right w-full lg:w-auto"
-      >
-        yolodev@gmail.com
-      </Text>
-    </div>
+    <Text
+      size="deco-sm"
+      className="uppercase font-impact text-right w-full lg:w-auto"
+    >
+      yolodev@gmail.com
+    </Text>
   </Container>
 );
