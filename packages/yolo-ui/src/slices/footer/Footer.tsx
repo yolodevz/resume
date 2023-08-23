@@ -15,12 +15,22 @@ export const Footer = () => {
     >
       <Copyright />
       <div className="flex flex-col lg:flex-row items-start gap-y-4 gap-x-10 pt-6">
-        <Link href="#portfolio" className="uppercase font-bold text-h2-md">
+        <a
+          href="https://www.linkedin.com/in/yolodev/"
+          rel="noopener noreferrer"
+          target="_blank"
+          className="uppercase font-bold text-h2-md"
+        >
           linkedin
-        </Link>
-        <Link href="#portfolio" className="uppercase font-bold text-h2-md">
+        </a>
+        <a
+          href="https://github.com/yolodevz/"
+          rel="noopener noreferrer"
+          target="_blank"
+          className="uppercase font-bold text-h2-md"
+        >
           github
-        </Link>
+        </a>
       </div>
     </Container>
   );
