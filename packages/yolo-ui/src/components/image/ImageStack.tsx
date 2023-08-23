@@ -31,7 +31,7 @@ type ImageSet = {
 };
 
 export const ImageStack = ({ imageSet, heading }: ImageSet) => (
-  <div className="grid grid-cols-[auto_1fr] sm:grid-cols-[1fr_auto] md:grid-cols-[2fr_1fr] xl:grid-cols-[auto_auto_1fr] gap-2 lg:gap-5 xl:gap-y-0">
+  <div className="grid grid-cols-[auto_1fr] sm:grid-cols-[2fr_1fr] xl:grid-cols-[auto_auto_1fr] gap-2 lg:gap-5 xl:gap-y-0">
     <Text as="h2" size="deco" className="uppercase font-impact col-span-1">
       {heading}
     </Text>
