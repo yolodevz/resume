@@ -90,7 +90,7 @@ export const HeroSlice = () => {
   }, []);
 
   return (
-    <Container outerClassName="pt-60">
+    <Container outerClassName="pt-60 bg-background-primary pb-6 md:pb-8">
       <Text size="h2-lg" className="uppercase font-bold mb-4">
         {"Nice to meet u! I'm"}
       </Text>

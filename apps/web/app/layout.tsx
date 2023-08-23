@@ -18,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`flex min-h-screen flex-col bg-background-primary ${impact.variable} ${helvetica.variable}`}
+        className={`flex min-h-screen flex-col bg-background-secondary ${impact.variable} ${helvetica.variable}`}
       >
         {children}
       </body>

@@ -224,7 +224,7 @@ export const TimelineSlice: React.FC = () => {
   return (
     <Container
       id="experience"
-      outerClassName="pt-5 md:pt-20 mb-16 md:mb-48 bg-background-primary rounded-section"
+      outerClassName="pt-5 md:pt-20 pb-16 md:pb-48 bg-background-primary rounded-section"
       innerClassName="max-w-screen-xl"
     >
       <Headline />
