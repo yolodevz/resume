@@ -4,7 +4,7 @@ import Image from "next/image";
 
 import { Container, Text, Button, ButtonGroup } from "../../components";
 
-import AsteriskIcon from "../../../public/icons/asterisk.svg";
+import AsteriskIcon from "../../../public/icons/asterisk-light.svg";
 
 // @todo inherit this and handle globally
 type ImageType = {

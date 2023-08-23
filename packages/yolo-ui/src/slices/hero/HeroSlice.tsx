@@ -4,6 +4,7 @@ import * as React from "react";
 import Image from "next/image";
 
 import { Container, Text } from "../../components";
+import { Copyright } from "../../slices";
 
 const imagesSrcs = [
   {
@@ -90,11 +91,11 @@ export const HeroSlice = () => {
   }, []);
 
   return (
-    <Container outerClassName="pt-60 bg-background-primary pb-6 md:pb-8">
+    <Container outerClassName="pt-60 bg-background-primary">
       <Text size="h2-lg" className="uppercase font-bold mb-4">
         {"Nice to meet u! I'm"}
       </Text>
-      <div className="flex w-full items-center flex-wrap justify-between gap-x-20 gap-y-4">
+      <div className="flex w-full items-center flex-wrap justify-between gap-x-20 gap-y-4 pb-6">
         <Text size="deco-md" className="uppercase font-impact">
           Yolodev
         </Text>
@@ -125,6 +126,10 @@ export const HeroSlice = () => {
           </div>
         </div>
       </div>
+      <Copyright
+        className="border-t border-foreground-tertiary pt-6"
+        theme="light"
+      />
     </Container>
   );
 };
