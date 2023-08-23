@@ -209,8 +209,8 @@ const Headline = () => (
           Michał.Wasilewski
         </Text>
         <Text size="h2-sm" className="uppercase font-bold max-w-xs">
-          Senior Creative Frontend Developer CSS Connoisseur & Tech Transitioner
-          Butterfly Breeder on the Side
+          Senior Creative Frontend Developer / CSS Connoisseur / Butterfly
+          Breeder on the Side
         </Text>
       </div>
     </div>

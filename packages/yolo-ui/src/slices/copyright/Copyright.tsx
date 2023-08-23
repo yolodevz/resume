@@ -37,8 +37,8 @@ const Info = ({ theme }: { theme: Theme }) => (
     <div className="uppercase font-bold">
       <span className="block text-h2-md">Michał.Wasilewski</span>
       <span className="block text-h2-sm mt-3">
-        Senior Creative Frontend Developer CSS Connoisseur & Tech Transitioner
-        Butterfly Breeder on the Side
+        Senior Creative Frontend Developer / CSS Connoisseur / Butterfly Breeder
+        on the Side
       </span>
     </div>
   </div>
