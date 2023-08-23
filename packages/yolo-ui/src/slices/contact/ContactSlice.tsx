@@ -29,9 +29,9 @@ const imageSet = {
 };
 
 export const ContactSlice = () => (
-  <Container innerClassName="flex flex-col gap-y-2 lg:gap-y-5">
+  <Container innerClassName="flex flex-col gap-y-2 md:gap-y-5">
     <ImageStack imageSet={imageSet} heading="contact" />
-    <div className="grid grid-cols-[1fr_auto] items-center gap-x-2 lg:gap-x-5 xl:gap-x-8">
+    <div className="grid grid-cols-[1fr_auto] items-center gap-x-2 md:gap-x-5 xl:gap-x-8">
       <div className="overflow-hidden rounded-xl lg:rounded-2.5xl">
         <Image
           className="w-full object-cover h-full max-h-[80px]"
