@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-import { Header, Footer, HeroSlice } from "@yolo/ui";
+import { Header, Footer, HeroSlice, ContactSlice } from "@yolo/ui";
 
 import { Pendo } from "../components/analytics";
 import * as React from "react";
@@ -15,6 +15,7 @@ export default function Page() {
       <Header />
       <HeroSlice />
       <div className="grid place-items-center h-[20svh]">in progress</div>
+      <ContactSlice />
       <Footer />
     </>
   );

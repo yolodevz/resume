@@ -1,0 +1,1 @@
+export { ContactSlice } from "./ContactSlice";
