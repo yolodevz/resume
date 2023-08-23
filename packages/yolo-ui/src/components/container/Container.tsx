@@ -47,7 +47,7 @@ export const Container = ({
     <section
       id={id}
       className={cx(
-        "w-full scroll-m-[50vh] overflow-x-clip px-5 lg:px-10 mx-auto grid grid-cols-12",
+        "w-full scroll-m-[20vh] overflow-x-clip px-5 lg:px-10 mx-auto grid grid-cols-12",
         outerClassName
       )}
       {...props}

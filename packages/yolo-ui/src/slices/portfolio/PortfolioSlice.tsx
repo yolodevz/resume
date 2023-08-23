@@ -161,6 +161,7 @@ export const Project = ({
 
 export const PortfolioSlice = () => (
   <Container
+    id="portfolio"
     outerClassName="bg-background-secondary text-foreground-secondary rounded-section pt-6 lg:pt-24 pb-20 lg:pb-40"
     innerClassName="max-w-screen-lg"
   >
