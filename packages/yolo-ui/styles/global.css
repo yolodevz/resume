@@ -21,3 +21,24 @@
         --color-foreground-tertiary: 0deg 0% 56%;
     }
 }
+
+@layer components {
+    .rounded-section {
+        @apply rounded-t-[30px] lg:rounded-t-[75px];
+    }
+}
+
+@layer utilities {
+    @variants responsive {
+        /* Hide scrollbar for Chrome, Safari and Opera */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* Hide scrollbar for IE, Edge and Firefox */
+        .no-scrollbar {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+    }
+}

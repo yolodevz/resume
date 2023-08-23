@@ -56,7 +56,7 @@ module.exports = {
         "deco-sm": createFluidFontSize(32, 80),
         deco: createFluidFontSize(56, 160),
         "deco-md": createFluidFontSize(100, 180),
-        "deco-lg": createFluidFontSize(100, 200),
+        "deco-lg": createFluidFontSize(56, 200),
       },
     },
   },

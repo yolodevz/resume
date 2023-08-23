@@ -39,7 +39,7 @@ export const Footer = () => {
   return (
     <Container
       as="footer"
-      outerClassName="bg-background-secondary text-foreground-secondary mt-12 rounded-t-[30px] lg:rounded-t-[75px]"
+      outerClassName="bg-background-secondary text-foreground-secondary mt-12 rounded-section"
       innerClassName="max-w-screen-xl py-8 lg:pt-14 lg:pb-20 divide-y divide-foreground-tertiary lg:divide-none"
     >
       <div className="flex flex-col lg:flex-row justify-between gap-y-10 mb-8">

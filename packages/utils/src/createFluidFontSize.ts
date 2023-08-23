@@ -2,8 +2,8 @@
  More info:
  https://www.smashingmagazine.com/2022/01/modern-fluid-typography-css-clamp/
  */
-const DEFAULT_MIN_SCREEN = 360;
-const DEFAULT_MAX_SCREEN = 1040;
+const DEFAULT_MIN_SCREEN = 390;
+const DEFAULT_MAX_SCREEN = 1440;
 
 const HTML_FONT_SIZE = 16;
 
