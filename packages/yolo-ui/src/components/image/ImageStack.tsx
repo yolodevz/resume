@@ -31,13 +31,13 @@ type ImageSet = {
 };
 
 export const ImageStack = ({ imageSet, heading }: ImageSet) => (
-  <div className="grid grid-cols-[auto_1fr] sm:grid-cols-[1fr_auto] md:grid-cols-[2fr_1fr] xl:grid-cols-[auto_auto_1fr] gap-2 md:gap-5">
+  <div className="grid grid-cols-[auto_1fr] sm:grid-cols-[1fr_auto] md:grid-cols-[2fr_1fr] xl:grid-cols-[auto_auto_1fr] gap-2 lg:gap-5 xl:gap-y-0">
     <Text as="h2" size="deco" className="uppercase font-impact col-span-1">
       {heading}
     </Text>
-    <div className="flex justify-center col-span-1 sm:row-span-2 xl:h-[160px]">
+    <div className="flex justify-center col-span-1 sm:row-span-2 xl:h-[160px] ml-5 sm:ml-0 xl:ml-10">
       <Image
-        className="hidden sm:block lg:w-auto ml-5 md:ml-0 xl:ml-10 object-cover rounded-xl md:rounded-2.5xl"
+        className="hidden sm:block w-full xl:w-auto object-cover rounded-xl md:rounded-2.5xl"
         width={imageSet.first.width.desktop}
         height={imageSet.first.height.desktop}
         alt={imageSet.first.alt}
@@ -53,7 +53,7 @@ export const ImageStack = ({ imageSet, heading }: ImageSet) => (
         priority
       />
     </div>
-    <div className="flex w-full col-span-2 sm:col-span-1 lg:h-[160px]">
+    <div className="flex w-full col-span-2 sm:col-span-1 xl:h-[160px]">
       <Image
         className="w-full object-cover rounded-xl md:rounded-2.5xl"
         width={imageSet.second.width}
