@@ -49,7 +49,7 @@ export const ContactSlice = () => (
         size="deco-sm"
         className="uppercase font-impact text-right w-full lg:w-auto truncate"
       >
-        hi@yolodev.com
+        <a href="mailto:yolodev.wasilewski@gmail.com">hi@yolodev.com</a>
       </Text>
     </div>
   </Container>
