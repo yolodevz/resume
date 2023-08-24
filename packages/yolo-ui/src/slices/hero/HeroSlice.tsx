@@ -91,7 +91,7 @@ export const HeroSlice = () => {
   }, []);
 
   return (
-    <Container outerClassName="pt-60 bg-background-primary">
+    <Container outerClassName="pt-60 theme-light">
       <Text size="h2-lg" className="uppercase font-bold mb-4">
         {"Nice to meet u! I'm"}
       </Text>
@@ -127,7 +127,7 @@ export const HeroSlice = () => {
         </div>
       </div>
       <Copyright
-        className="border-t border-foreground-tertiary pt-6"
+        className="border-t border-foreground-secondary pt-6"
         theme="light"
       />
     </Container>

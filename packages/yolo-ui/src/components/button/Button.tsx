@@ -6,7 +6,7 @@ const buttonStyle = cva("border px-5 py-2.5 rounded-full w-max text-sm", {
   variants: {
     isDisabled: {
       false: null,
-      true: "opacity-50 pointer-events-none",
+      true: "opacity-70 pointer-events-none",
     },
   },
   defaultVariants: {

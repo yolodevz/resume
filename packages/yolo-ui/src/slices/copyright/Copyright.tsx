@@ -20,7 +20,7 @@ const Copy = ({ theme }: { theme: Theme }) => (
     <div className="text-h2-sm uppercase font-bold">
       <span className="block">curriculum vitae</span>
       <span className="block">personal website</span>
-      <span className="block text-foreground-tertiary mt-4">
+      <span className="block text-foreground-secondary mt-4">
         {new Date().getFullYear()} © Copyright michał.wasilewski
       </span>
     </div>

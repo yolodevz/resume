@@ -10,7 +10,7 @@ export const Header = () => {
     <Container
       as="header"
       size="lg"
-      outerClassName="w-full bg-background-primary"
+      outerClassName="w-full theme-light"
       innerClassName="hidden md:flex justify-between gap-x-4 py-6 text-h2 uppercase font-bold"
     >
       <Link href="/">m. wasilewski</Link>

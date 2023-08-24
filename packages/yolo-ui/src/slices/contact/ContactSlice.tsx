@@ -31,7 +31,7 @@ const imageSet = {
 export const ContactSlice = () => (
   <Container
     id="contact"
-    outerClassName="bg-background-primary pb-12"
+    outerClassName="theme-light pb-12"
     innerClassName="flex flex-col gap-y-2 md:gap-y-5"
   >
     <ImageStack imageSet={imageSet} heading="contact" />

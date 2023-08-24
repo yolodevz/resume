@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+
 import { Container, Text, TagsList } from "../../components";
 
 import { cx } from "class-variance-authority";
@@ -224,7 +225,7 @@ export const TimelineSlice: React.FC = () => {
   return (
     <Container
       id="experience"
-      outerClassName="pt-5 md:pt-20 pb-16 md:pb-48 bg-background-primary rounded-section"
+      outerClassName="theme-light pt-5 md:pt-20 pb-16 md:pb-48 rounded-section"
       innerClassName="max-w-screen-xl"
     >
       <Headline />
@@ -256,7 +257,7 @@ export const TimelineSlice: React.FC = () => {
                 </Text>
                 <span
                   className={cx(
-                    "block h-1.5 w-4/5 bg-background-secondary absolute bottom-0 rounded-full",
+                    "block h-1.5 w-4/5 bg-foreground-primary absolute bottom-0 rounded-full",
                     selectedYear === year ? "opacity-100" : "opacity-0"
                   )}
                 />
@@ -264,10 +265,15 @@ export const TimelineSlice: React.FC = () => {
             ))}
         </div>
       </div>
-      <div className="space-y-16 md:space-y-24 mt-10 md:mt-16">
-        {yearData.map((info, index) => (
-          <Timeline key={index} info={info} />
-        ))}
+      <div className="mt-10 md:mt-16">
+        <Container
+          outerClassName="!px-0"
+          innerClassName="grid md:grid-cols-2 gap-x-16 max-w-screen-lg gap-y-16 md:gap-y-24"
+        >
+          {yearData.map((info, index) => (
+            <Timeline key={index} info={info} />
+          ))}
+        </Container>
       </div>
     </Container>
   );
@@ -279,14 +285,11 @@ interface TimelineSliceProps {
 
 export const Timeline: React.FC<TimelineSliceProps> = ({ info }) => {
   return (
-    <Container
-      outerClassName="!px-0"
-      innerClassName="grid md:grid-cols-2 gap-x-16 max-w-screen-lg gap-y-6 md:gap-y-0 animate-fade-in"
-    >
+    <>
       <div>
         <div className="space-x-4 mb-6">
           <Text className="inline-block font-bold text-sm">{info.date}</Text>
-          <Text className="inline-block font-bold uppercase text-foreground-tertiary text-xs">
+          <Text className="inline-block font-bold uppercase text-foreground-secondary text-xs">
             {info.position}
           </Text>
         </div>
@@ -294,23 +297,23 @@ export const Timeline: React.FC<TimelineSliceProps> = ({ info }) => {
           <Text size="h1" className="font-bold">
             {info.title}
           </Text>
-          <Text className="font-inter text-lg text-foreground-tertiary font-bold">
+          <Text className="font-inter text-lg text-foreground-secondary font-bold">
             {info.company}
           </Text>
         </div>
       </div>
       <div className="space-y-3 md:space-y-6">
-        <Text as="h3" size="h2" className="uppercase font-bold">
+        <Text size="h2" className="uppercase font-bold">
           Responsibilities
         </Text>
         <Text size="body" className="leading-normal">
           {info.responsibilities}
         </Text>
-        <Text as="h3" size="h2" className="uppercase font-bold">
+        <Text size="h2" className="uppercase font-bold">
           Skills
         </Text>
         <TagsList tags={info.skills} />
       </div>
-    </Container>
+    </>
   );
 };

@@ -7,6 +7,11 @@
 
 
 @layer base {
+    :root {
+        --color-background: 0deg 0% 15%;
+        --color-foreground-primary: 0deg 0% 100%;
+    }
+
     html {
         -webkit-tap-highlight-color: transparent;
         scroll-behavior: smooth;
@@ -14,16 +19,25 @@
 
     body {
         font-family: 'helvetica', sans-serif;
-        @apply text-body-sm text-foreground-primary;
+        @apply text-body-sm bg-background text-foreground-primary;
     }
 
-    :root {
-        --color-background-primary: 60deg 100% 98%;
-        --color-background-secondary: 0deg 0% 15%;
+    .theme-light {
+        --color-background: 60deg 100% 98%;
 
         --color-foreground-primary: 0deg 0% 20%;
-        --color-foreground-secondary: 0deg 0% 100%;
-        --color-foreground-tertiary: 0deg 0% 56%;
+        --color-foreground-secondary: 0deg 0% 34%;
+
+        @apply bg-background text-foreground-primary;
+    }
+
+    .theme-dark {
+        --color-background: 0deg 0% 15%;
+
+        --color-foreground-primary: 0deg 0% 100%;
+        --color-foreground-secondary: 0deg 0% 70%;
+
+        @apply bg-background text-foreground-primary;
     }
 }
 

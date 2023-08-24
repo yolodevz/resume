@@ -129,16 +129,16 @@ export const Project = ({
       {index ? (
         <Text
           size="h2"
-          className="hidden lg:block absolute top-0 -left-8 text-foreground-tertiary"
+          className="hidden lg:block absolute top-0 -left-8 text-foreground-secondary"
         >
           {`0${index}`}
         </Text>
       ) : null}
-      <div className="flex">
+      <div className="flex items-center">
         <Image
           src={AsteriskIcon}
           alt="copyright icon"
-          className="w-4 h-4 mr-2"
+          className="w-3 h-3 md:w-4 md:h-4 mr-2"
         />
         <Text size="h2" className="uppercase font-bold">
           {type}
@@ -162,7 +162,7 @@ export const Project = ({
 export const PortfolioSlice = () => (
   <Container
     id="portfolio"
-    outerClassName="bg-background-secondary text-foreground-secondary rounded-section pt-6 lg:pt-24 pb-20 lg:pb-40"
+    outerClassName="theme-dark rounded-section pt-6 lg:pt-24 pb-20 lg:pb-40"
     innerClassName="max-w-screen-lg"
   >
     <div className="space-y-2 text-right mb-8 lg:mb-16">

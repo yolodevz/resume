@@ -8,14 +8,10 @@ module.exports = {
         container: "1440px",
       },
       colors: {
-        background: {
-          primary: "hsl(var(--color-background-primary) / <alpha-value>)",
-          secondary: "hsl(var(--color-background-secondary) / <alpha-value>)",
-        },
+        background: "hsl(var(--color-background) / <alpha-value>)",
         foreground: {
           primary: "hsl(var(--color-foreground-primary) / <alpha-value>)",
           secondary: "hsl(var(--color-foreground-secondary) / <alpha-value>)",
-          tertiary: "hsl(var(--color-foreground-tertiary) / <alpha-value>)",
         },
       },
       fontFamily: {
