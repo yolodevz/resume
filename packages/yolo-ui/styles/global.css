@@ -1,63 +1,84 @@
 @import "fontface.css";
-@import url('https://fonts.googleapis.com/css2?family=Dorsa&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Dorsa&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
 @layer base {
-    :root {
-        --color-background: 0deg 0% 15%;
-        --color-foreground-primary: 0deg 0% 100%;
-    }
+  :root {
+    --color-background: 0deg 0% 15%;
 
-    html {
-        -webkit-tap-highlight-color: transparent;
-        scroll-behavior: smooth;
-    }
+    --color-foreground-primary: 0deg 0% 100%;
 
-    body {
-        font-family: 'helvetica', sans-serif;
-        @apply text-body-sm bg-background text-foreground-primary;
-    }
+    --color-button-gradient-main-1: hsl(0deg, 0%, 7%);
+    --color-button-gradient-main-2: hsl(0deg 0% 15%);
+    --color-button-gradient-main-3: hsl(0deg, 0%, 7%);
 
-    .theme-light {
-        --color-background: 60deg 100% 98%;
+    --color-button-gradient-complementary-1: hsl(0deg, 0%, 7%);
+    --color-button-gradient-complementary-2: hsl(0deg, 100%, 100%);
+    --color-button-gradient-complementary-3: hsl(0deg, 0%, 7%);
+  }
 
-        --color-foreground-primary: 0deg 0% 20%;
-        --color-foreground-secondary: 0deg 0% 34%;
+  html {
+    -webkit-tap-highlight-color: transparent;
+    scroll-behavior: smooth;
+  }
 
-        @apply bg-background text-foreground-primary;
-    }
+  body {
+    font-family: "helvetica", sans-serif;
+    @apply text-body-sm bg-background text-foreground-primary;
+  }
 
-    .theme-dark {
-        --color-background: 0deg 0% 15%;
+  .theme-light {
+    --color-background: 60deg 100% 98%;
 
-        --color-foreground-primary: 0deg 0% 100%;
-        --color-foreground-secondary: 0deg 0% 70%;
+    --color-foreground-primary: 0deg 0% 20%;
+    --color-foreground-secondary: 0deg 0% 34%;
 
-        @apply bg-background text-foreground-primary;
-    }
+    @apply bg-background text-foreground-primary;
+  }
+
+  .theme-dark {
+    --color-background: 0deg 0% 15%;
+
+    --color-foreground-primary: 0deg 0% 100%;
+    --color-foreground-secondary: 0deg 0% 70%;
+
+    @apply bg-background text-foreground-primary;
+  }
 }
 
 @layer components {
-    .rounded-section {
-        @apply rounded-t-[30px] lg:rounded-t-[75px];
-    }
+  .rounded-section {
+    @apply rounded-t-[30px] lg:rounded-t-[75px];
+  }
 }
 
 @layer utilities {
-    @variants responsive {
-        /* Hide scrollbar for Chrome, Safari and Opera */
-        .no-scrollbar::-webkit-scrollbar {
-            display: none;
-        }
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
 
-        /* Hide scrollbar for IE, Edge and Firefox */
-        .no-scrollbar {
-            -ms-overflow-style: none;  /* IE and Edge */
-            scrollbar-width: none;  /* Firefox */
-        }
-    }
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+
+  .btn-gradient-primary {
+    background-image: linear-gradient(
+        45deg,
+        var(--color-button-gradient-main-1),
+        var(--color-button-gradient-main-2),
+        var(--color-button-gradient-main-3)
+      ),
+      linear-gradient(
+        45deg,
+        var(--color-button-gradient-complementary-1),
+        var(--color-button-gradient-complementary-2),
+        var(--color-button-gradient-complementary-3)
+      );
+  }
 }

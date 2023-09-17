@@ -2,17 +2,22 @@ import * as React from "react";
 import Link from "next/link";
 import { cva } from "class-variance-authority";
 
-const buttonStyle = cva("border px-5 py-2.5 rounded-full w-max text-sm", {
-  variants: {
-    isDisabled: {
-      false: null,
-      true: "opacity-70 pointer-events-none",
+const buttonStyle = cva(
+  [
+    "border border-current px-5 py-2.5 rounded-full w-max text-sm",
+    "disabled:opacity-70 disabled:pointer-events-none",
+  ],
+  {
+    variants: {
+      funky: {
+        true: "hover:btn-gradient-primary hover:border-transparent [background-clip:padding-box,_border-box] bg-origin-border",
+      },
     },
-  },
-  defaultVariants: {
-    isDisabled: false,
-  },
-});
+    defaultVariants: {
+      funky: true,
+    },
+  }
+);
 
 type BaseProps = {
   children: React.ReactNode;
@@ -55,11 +60,10 @@ export const Button = (props: ButtonProps) => {
     );
   }
 
-  const { className, children, disabled, ...rest } = props as ButtonAsButton;
+  const { className, children, ...rest } = props as ButtonAsButton;
   return (
     <button
       className={buttonStyle({
-        isDisabled: disabled,
         className,
       })}
       {...rest}
