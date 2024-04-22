@@ -313,7 +313,7 @@ export const TimelineSlice: React.FC = () => {
                 <label
                   key={year}
                   className={cx(
-                    "cursor-pointer relative flex pb-8 justify-center transition-colors",
+                    "cursor-pointer relative flex pb-8 justify-center transition-colors duration-[460ms]",
                     "hover:text-foreground-primary",
                     selectedYear === year
                       ? "text-foreground-primary"
@@ -338,7 +338,7 @@ export const TimelineSlice: React.FC = () => {
                     layoutId={`underline-${year}`}
                     animate={{
                       width: selectedYear === year ? "100%" : "0%",
-                      transition: { duration: 0.3, ease: "easeInOut" },
+                      transition: { duration: 0.36 },
                     }}
                   />
                 </label>
