@@ -1,1 +1,0 @@
-export { LogosGrid } from "./LogosGrid";

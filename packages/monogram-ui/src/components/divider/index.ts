@@ -1,1 +1,0 @@
-export { SquigglyDivider } from "./Squiggly";

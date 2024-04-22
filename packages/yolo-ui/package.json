@@ -39,7 +39,8 @@
   "dependencies": {
     "class-variance-authority": "^0.6.1",
     "framer-motion": "^11.1.7",
-    "next": "^13.4.19",
+    "next": "^13.4.1",
+    "usehooks-ts": "^3.1.0",
     "utils": "workspace:*"
   },
   "eslintConfig": {
