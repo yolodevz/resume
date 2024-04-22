@@ -64,9 +64,9 @@ export const imagesSrcs = [
 export const HeroSlice = () => {
   const [currentIndex, setCurrentIndex] = React.useState(0);
 
-  useInterval(() => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % imagesSrcs.length);
-  }, 2000);
+  // useInterval(() => {
+  //   setCurrentIndex((prevIndex) => (prevIndex + 1) % imagesSrcs.length);
+  // }, 2000);
 
   const imageSet = imagesSrcs[currentIndex];
 

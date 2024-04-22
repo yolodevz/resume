@@ -60,20 +60,25 @@ const data: Record<string, CompanyInfo[]> = {
       position: "Fulltime",
       title: "Senior Frontend Engineer",
       company: "Coinshift",
-      responsibilities: `I've frolicked on the creative side of UI implementations, managing
-                         to lend a hand in crafting collection pages for brands like Weekday
-                         and Highsnobiety. My main playground was UI implementations,
-                         core component crafting, and doing it all with a dash of style.`,
+      responsibilities: `I developed the V3 core application using Next.js, 
+                         incorporating the app router to enhance modularity. 
+                         My roles encompassed architectural design, API integration, 
+                         implementation of the design system, and comprehensive documentation. 
+                         I found integrating onboarding screens and Auth0 exceptionally rewarding.
+                         Scalability and security were my primary concerns.`,
       skills: [
         "react",
         "typescript",
+        "zustand",
+        "framer-motion",
+        "Auth0",
         "UX/UI",
         "next.js",
-        "GSAP",
-        "jotai",
         "blockchain",
+        "vitest",
         "design system",
         "storybook",
+        "chromatic",
       ],
     },
     {
@@ -113,6 +118,8 @@ const data: Record<string, CompanyInfo[]> = {
         "typescript",
         "UX/UI",
         "next.js",
+        "GSAP",
+        "jotai",
         "blockchain",
         "design system",
         "storybook",
@@ -350,7 +357,7 @@ export const TimelineSlice: React.FC = () => {
             {yearData.map((info, index) => (
               <CarouselItem
                 key={index}
-                className="grid md:grid-cols-2 gap-x-16 gap-y-16 md:gap-y-24 max-w-screen-lg"
+                className="flex flex-col md:grid md:grid-cols-2 gap-x-16 gap-y-16 md:gap-y-24 max-w-screen-lg"
               >
                 <Timeline key={index} info={info} />
               </CarouselItem>
