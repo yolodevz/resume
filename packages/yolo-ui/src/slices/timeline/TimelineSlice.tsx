@@ -346,29 +346,31 @@ export const TimelineSlice: React.FC = () => {
           </div>
         </div>
 
-        <Carousel
-          opts={{
-            align: "start",
-          }}
-          orientation="vertical"
-          className="w-full mt-10 md:mt-16 md:cursor-grab"
-        >
-          <CarouselContent className="-mt-1 h-[500px] md:h-[440px]">
-            {yearData.map((info, index) => (
-              <CarouselItem
-                key={index}
-                className="flex flex-col md:grid md:grid-cols-2 gap-x-16 gap-y-16 md:gap-y-24 max-w-screen-lg"
-              >
-                <Timeline key={index} info={info} />
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-          <CarouselPrevious className="theme-dark left-auto right-2 hidden md:flex" />
-          <CarouselNext
-            variant="outline"
-            className="theme-dark left-auto right-2 top-0 hidden md:flex"
-          />
-        </Carousel>
+        <Container>
+          <Carousel
+            opts={{
+              align: "start",
+            }}
+            orientation="vertical"
+            className="w-full mt-10 md:mt-16 md:cursor-grab"
+          >
+            <CarouselContent className="-mt-1 h-[500px] md:h-[440px] items-center">
+              {yearData.map((info, index) => (
+                <CarouselItem
+                  key={index}
+                  className="flex flex-col md:grid md:grid-cols-2 gap-x-16 gap-y-16 md:gap-y-24 max-w-screen-lg"
+                >
+                  <Timeline key={index} info={info} />
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="theme-dark left-full right-0 bottom-full top-auto" />
+            <CarouselNext
+              variant="outline"
+              className="theme-dark left-full right-0 top-full"
+            />
+          </Carousel>
+        </Container>
       </Container>
     </AnimatePresence>
   );
