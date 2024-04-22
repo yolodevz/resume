@@ -354,7 +354,7 @@ export const TimelineSlice: React.FC = () => {
             orientation="vertical"
             className="w-full mt-10 md:mt-16 md:cursor-grab"
           >
-            <CarouselContent className="-mt-1 h-[500px] md:h-[440px] items-center">
+            <CarouselContent className="-mt-1 h-[600px] md:h-[440px] items-center">
               {yearData.map((info, index) => (
                 <CarouselItem
                   key={index}
