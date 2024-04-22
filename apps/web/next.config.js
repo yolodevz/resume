@@ -2,6 +2,6 @@ module.exports = {
   reactStrictMode: true,
   transpilePackages: ["yolo-ui"],
   images: {
-    domains: ["cdn.raster.app"],
+    domains: ["cdn.raster.app", "rstr.in"],
   },
 };

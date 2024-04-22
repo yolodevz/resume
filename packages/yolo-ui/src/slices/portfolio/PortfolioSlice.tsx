@@ -28,6 +28,22 @@ interface Project {
 
 const projects = [
   {
+    name: "Coinshift",
+    image: {
+      src: "https://rstr.in/v327tq6nmjmw2o/resume/vokBf6X2Zkl",
+      alt: "a bunch of different types of web3 logos on a blue background",
+      width: 670,
+      height: 570,
+    },
+    type: "Dapp | web3 + UI",
+    description:
+      "Coinshift simplifies treasury operations for users, delivers actionable insights to financial managers, and increases transparency for communities and investors.",
+    link: {
+      src: "https://coinshift.xyz/",
+      title: "coinshift.xyz",
+    },
+  },
+  {
     name: "The Fabricant",
     image: {
       src: "https://cdn.raster.app/v327tq6nmjmw2o/resume/TEsv-gObIDD?ixlib=js-3.8.0&s=63084bffdb446856f8cee7a22cca9e24",
@@ -35,9 +51,9 @@ const projects = [
       width: 670,
       height: 570,
     },
-    type: "website - UI",
+    type: "Dapp | web3 + UI",
     description:
-      "igniting a fashion revolution through co-⁠creation. rip the status quo.",
+      "igniting a fashion revolution through co-creation. rip the status quo.",
     link: {
       src: "https://www.thefabricant.com/",
       title: "thefabricant.com",

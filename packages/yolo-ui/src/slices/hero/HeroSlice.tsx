@@ -8,7 +8,7 @@ import { Copyright } from "../../slices";
 import { motion, AnimatePresence } from "framer-motion";
 import { useInterval } from "usehooks-ts";
 
-const imagesSrcs = [
+export const imagesSrcs = [
   {
     first: {
       src: "https://cdn.raster.app/v327tq6nmjmw2o/resume/0HrAk5r-lrX?ixlib=js-3.8.0&s=9105af5800a47bec4a0012c747230d25",
@@ -95,7 +95,6 @@ export const HeroSlice = () => {
                 height={153}
                 alt={imageSet.first.alt}
                 src={imageSet.first.src}
-                priority
               />
             </motion.div>
             <motion.div
@@ -112,7 +111,6 @@ export const HeroSlice = () => {
                 height={153}
                 alt={imageSet.second.alt}
                 src={imageSet.second.src}
-                priority
               />
             </motion.div>
           </AnimatePresence>

@@ -1,5 +1,5 @@
 export const Tag = ({ name }: { name: string }) => (
-  <div className="px-4 py-2 border border-foreground-primary rounded-full w-max text-sm">
+  <div className="px-3 py-1 border border-foreground-primary rounded-full w-max text-sm">
     {name}
   </div>
 );
