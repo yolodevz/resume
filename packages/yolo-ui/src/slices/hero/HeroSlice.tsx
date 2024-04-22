@@ -5,6 +5,8 @@ import Image from "next/image";
 
 import { Container, Text } from "../../components";
 import { Copyright } from "../../slices";
+import { motion, AnimatePresence } from "framer-motion";
+import { useInterval } from "usehooks-ts";
 
 const imagesSrcs = [
   {
@@ -61,18 +63,12 @@ const imagesSrcs = [
 
 export const HeroSlice = () => {
   const [currentIndex, setCurrentIndex] = React.useState(0);
-  const [isHovered, setIsHovered] = React.useState(false);
+
+  useInterval(() => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % imagesSrcs.length);
+  }, 2000);
+
   const imageSet = imagesSrcs[currentIndex];
-
-  React.useEffect(() => {
-    if (!isHovered) return; // Do not start the interval if hovered
-
-    const timer = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % imagesSrcs.length);
-    }, 600); // Adjust the timeout value as needed (5000ms or 5s in this case)
-
-    return () => clearInterval(timer);
-  }, [isHovered]);
 
   return (
     <Container outerClassName="pt-60 theme-light">
@@ -83,31 +79,43 @@ export const HeroSlice = () => {
         <Text size="deco-md" className="uppercase font-impact">
           Yolodev
         </Text>
-        <div
-          className="flex gap-x-2 md:gap-x-5"
-          onMouseEnter={() => setIsHovered(true)}
-          onMouseLeave={() => {
-            setIsHovered(false);
-          }}
-        >
-          <div className="flex">
-            <Image
-              width={153}
-              height={153}
-              alt={imageSet.first.alt}
-              src={imageSet.first.src}
-              priority
-            />
-          </div>
-          <div className="flex -mr-[10%]">
-            <Image
-              width={497}
-              height={153}
-              alt={imageSet.second.alt}
-              src={imageSet.second.src}
-              priority
-            />
-          </div>
+        <div className="flex gap-x-2 md:gap-x-5">
+          <AnimatePresence mode="popLayout">
+            <motion.div
+              key={imageSet.first.src}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.36 }}
+              layout
+              className="flex"
+            >
+              <Image
+                width={153}
+                height={153}
+                alt={imageSet.first.alt}
+                src={imageSet.first.src}
+                priority
+              />
+            </motion.div>
+            <motion.div
+              key={imageSet.second.src}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.36 }}
+              layout
+              className="flex -mr-[10%]"
+            >
+              <Image
+                width={497}
+                height={153}
+                alt={imageSet.second.alt}
+                src={imageSet.second.src}
+                priority
+              />
+            </motion.div>
+          </AnimatePresence>
         </div>
       </div>
       <Copyright

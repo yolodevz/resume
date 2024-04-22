@@ -5,6 +5,7 @@ import React, { useState } from "react";
 import { Container, Text, TagsList } from "../../components";
 
 import { cx } from "class-variance-authority";
+import { motion } from "framer-motion";
 
 type CompanyInfo = {
   date: string;
@@ -243,7 +244,13 @@ export const TimelineSlice: React.FC = () => {
             .map((year) => (
               <label
                 key={year}
-                className="cursor-pointer relative flex pb-8 justify-center"
+                className={cx(
+                  "cursor-pointer relative flex pb-8 justify-center transition-colors",
+                  "hover:text-foreground-primary",
+                  selectedYear === year
+                    ? "text-foreground-primary"
+                    : "text-foreground-secondary/50"
+                )}
               >
                 <input
                   className="hidden"
@@ -255,11 +262,16 @@ export const TimelineSlice: React.FC = () => {
                 <Text size="deco-xs" className="font-impact">
                   {`'${year.slice(2)}`}
                 </Text>
-                <span
+                <motion.span
                   className={cx(
                     "block h-1.5 w-4/5 bg-foreground-primary absolute bottom-0 rounded-full",
                     selectedYear === year ? "opacity-100" : "opacity-0"
                   )}
+                  layoutId={`underline-${year}`}
+                  animate={{
+                    width: selectedYear === year ? "100%" : "0%",
+                    transition: { duration: 0.3, ease: "easeInOut" },
+                  }}
                 />
               </label>
             ))}

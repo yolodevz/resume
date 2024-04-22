@@ -1,5 +1,4 @@
-import dynamic from "next/dynamic";
-import Head from "next/head";
+"use client";
 
 import {
   Header,
@@ -10,26 +9,26 @@ import {
   ContactSlice,
 } from "@yolo/ui";
 
-import { Pendo } from "../components/analytics";
+import { AnimatePresence, motion } from "framer-motion";
+
 import * as React from "react";
-
-const isDevelopment = process.env["NODE_ENV"] === "development";
-
-const DynamicPendoComponent = dynamic(() =>
-  import("../components/analytics").then((mod) => mod.Pendo)
-);
 
 export default function Page() {
   return (
-    <>
-      <Pendo />
-      <Head>{!isDevelopment && <DynamicPendoComponent />}</Head>
-      <Header />
-      <HeroSlice />
-      <PortfolioSlice />
-      <TimelineSlice />
-      <ContactSlice />
-      <Footer />
-    </>
+    <AnimatePresence>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 0.66 }}
+      >
+        <Header />
+        <HeroSlice />
+        <PortfolioSlice />
+        <TimelineSlice />
+        <ContactSlice />
+        <Footer />
+      </motion.div>
+    </AnimatePresence>
   );
 }
